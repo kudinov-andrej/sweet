@@ -1,11 +1,22 @@
 import './App.css';
 import { animationPunktList } from './constants/header/headerConstants.js'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeaderAnimationPunct from './HeaderAnimationPunct'
 
 function HeaderAnimationBlock() {
 
     const [selectedPunkt, setSelectedPunkt] = useState(0);
+
+
+    useEffect(() => {
+        if (selectedPunkt < 0) {
+            setTimeout(() => setSelectedPunkt(3), 4000);
+        } else if (selectedPunkt > 2) {
+            setTimeout(() => setSelectedPunkt(0), 4000);
+        } else {
+            setTimeout(() => setSelectedPunkt(selectedPunkt + 1), 4000);
+        }
+    }, [selectedPunkt]);
 
     const handlePrevPunkt = () => {
         setSelectedPunkt(selectedPunkt === 0 ? 3 : selectedPunkt - 1);
