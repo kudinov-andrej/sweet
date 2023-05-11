@@ -460,6 +460,8 @@ header {
 .love__exlips {
   width: 19vw;
   height: 19vw;
+  max-width: 268px;
+  max-height: 268px;
 }
 
 .love__exlips_type_one {
@@ -570,4 +572,131 @@ header {
   line-height: 22px;
   text-align: center;
   color: #292929;
+}
+
+.navigation {
+  max-width: 100%;
+  background-color: #F7F7F7;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.navigation__block {
+  margin: 0;
+  padding: 0;
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 25px;
+  column-gap: 30px;
+}
+
+.navigation__punkt {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.navigation__punkt:hover {
+  scale: 1.02;
+}
+
+.navigation__punkt-link {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #292929;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.navigation__punkt-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.navigation__punkt-title {
+  margin: 0;
+  padding: 0;
+  max-width: 372px;
+  word-wrap: break-word;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+}
+
+.navigation__punkt-text {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  max-width: 463px;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+}
+
+.navigation__punkt_type_one {
+  background-image: url('./image/navigation/Фон1.png');
+}
+
+.navigation__punkt_type_two {
+  background-image: url('./image/navigation/фон2.png');
+}
+
+.navigation__punkt_type_three {
+  background-image: url('./image/navigation/фон3.png');
+}
+
+.navigation__punkt_type_four {
+  background-image: url('./image/navigation/фон4.png');
+}
+
+.navigation__punkt_type_five {
+  background-image: url('./image/navigation/фон5.png');
+}
+
+.navigation__punkt_type_six {
+  background-image: url('./image/navigation/фон6.png');
+}
+
+.navigation__punkt-img_type_one {
+  background-image: url('./image/navigation/iconфон1.svg');
+}
+
+.navigation__punkt-img_type_two {
+  background-image: url('./image/navigation/iconФон2.svg');
+}
+
+.navigation__punkt-img_type_three {
+  background-image: url('./image/navigation/iconфон3.svg');
+}
+
+.navigation__punkt-img_type_four {
+  background-image: url('./image/navigation/iconФон4.svg');
+}
+
+.navigation__punkt-img_type_five {
+  background-image: url('./image/navigation/iconфон5.svg');
+}
+
+.navigation__punkt-img_type_six {
+  background-image: url('./image/navigation/iconФон6.svg');
 }

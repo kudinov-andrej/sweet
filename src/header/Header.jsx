@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 
 import HeaderAnimationBlock from './HeaderAnimationBlock';
 import HeaderNavigation from './HeaderNavigation';

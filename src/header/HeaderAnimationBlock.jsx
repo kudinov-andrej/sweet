@@ -1,5 +1,5 @@
-import './App.css';
-import { animationPunktList } from './constants/header/headerConstants.js'
+import '../App.css';
+import { animationPunktList } from '../constants/headerConst/headerConstants.js'
 import React, { useState, useEffect } from 'react';
 import HeaderAnimationPunct from './HeaderAnimationPunct'
 
