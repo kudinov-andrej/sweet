@@ -358,7 +358,7 @@ header {
   background-size: contain;
 }
 
-.love__img-group_tupe_one {
+.love__img-group_type_one {
   background-image: url('./image/Love/macaron1.png');
   width: 20%;
   height: 20%;
@@ -366,7 +366,7 @@ header {
   left: 100%;
 }
 
-.love__img-group_tupe_two {
+.love__img-group_type_two {
   background-image: url('./image/Love/лист2.png');
   width: 10%;
   height: 10%;
@@ -375,7 +375,7 @@ header {
 
 }
 
-.love__img-group_tupe_three {
+.love__img-group_type_three {
   background-image: url('./image/Love/миндаль3.png');
   width: 7%;
   height: 7%;
@@ -384,7 +384,7 @@ header {
 
 }
 
-.love__img-group_tupe_four {
+.love__img-group_type_four {
   background-image: url('./image/Love/макарон4.png');
   width: 20%;
   height: 20%;
@@ -392,7 +392,7 @@ header {
   left: 100%;
 }
 
-.love__img-group_tupe_five {
+.love__img-group_type_five {
   background-image: url('./image/Love/миндаль5.png');
   width: 7%;
   height: 7%;
@@ -401,7 +401,7 @@ header {
 
 }
 
-.love__img-group_tupe_six {
+.love__img-group_type_six {
   background-image: url('./image/Love/миндаль6.png');
   width: 7%;
   height: 7%;
@@ -409,7 +409,7 @@ header {
   left: 40%;
 }
 
-.love__img-group_tupe_seven {
+.love__img-group_type_seven {
   background-image: url('./image/Love/макарон7.png');
   width: 20%;
   height: 20%;
@@ -417,7 +417,7 @@ header {
   left: 0;
 }
 
-.love__img-group_tupe_eight {
+.love__img-group_type_eight {
   background-image: url('./image/Love/лист8.png');
   width: 15%;
   height: 15%;
@@ -425,7 +425,7 @@ header {
   left: -5%;
 }
 
-.love__img-group_tupe_nine {
+.love__img-group_type_nine {
   background-image: url('./image/Love/макарон9.png');
   width: 20%;
   height: 20%;
@@ -433,7 +433,7 @@ header {
   left: -20%;
 }
 
-.love__img-group_tupe_ten {
+.love__img-group_type_ten {
   background-image: url('./image/Love/миндаль10.png');
   width: 7%;
   height: 7%;
@@ -441,7 +441,7 @@ header {
   left: 4%;
 }
 
-.love__img-group_tupe_eleven {
+.love__img-group_type_eleven {
   background-image: url('./image/Love/макарон11.png');
   width: 20%;
   height: 20%;
@@ -449,7 +449,7 @@ header {
   left: 25%;
 }
 
-.love__img-group_tupe_twelve {
+.love__img-group_type_twelve {
   background-image: url('./image/Love/миндаль12.png');
   width: 7%;
   height: 7%;
