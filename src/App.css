@@ -14,6 +14,7 @@ header {
 
 .header__animation {
   width: 100%;
+
   display: flex;
   flex-direction: row;
   background-color: #D4E9F9;
@@ -699,4 +700,138 @@ header {
 
 .navigation__punkt-img_type_six {
   background-image: url('./image/navigation/iconФон6.svg');
+}
+
+.promotion {
+  margin: 0;
+  padding: 0;
+
+  margin-top: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promotion__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  max-width: 250px;
+  word-wrap: break-word;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #292929;
+}
+
+.promotion__block {
+  display: flex;
+  flex-direction: row;
+  max-width: 83%;
+  overflow: scroll;
+}
+
+.promotion__block::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+  display: none;
+}
+
+.promotion__block::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.promotion__block::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+
+.promotion__block {
+  scrollbar-width: none;
+}
+
+.promotion__block::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.promotion__card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  max-width: 270px;
+  position: relative;
+}
+
+.promotion__card-img {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.promotion__card-info {}
+
+.promotion__card-name {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 2;
+  max-width: 200px;
+  padding: 4px 10px 4px 15px;
+  border-radius: 0px 10px 10px 0px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: aqua;
+}
+
+.promotion__card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  min-height: 110px;
+  width: 270px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #8CC4EC;
+  border-radius: 0px 0px 5px 5px;
+
+}
+
+.promotion__scroll-block {
+  align-self: flex-end;
+  margin-right: 10%;
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  max-width: 100px;
+}
+
+.promotion__scroll {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: #000000 2px solid;
+}
+
+.promotion__scroll_type_active {
+  background: #E7426A;
 }

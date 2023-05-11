@@ -1,13 +1,11 @@
 import './App.css';
 import Header from './header/Header';
-import LoveBlock from './LoveBlock'
-import Navigation from './navigation/Navigation'
-
+import LoveBlock from './LoveBlock';
+import Navigation from './navigation/Navigation';
+import Promotion from './Promotion'
 
 
 function App() {
-
-  console.log("я работаю")
 
   return (
     <div className="App">
@@ -15,6 +13,7 @@ function App() {
       <main className='page'>
         <LoveBlock />
         <Navigation />
+        <Promotion />
       </main>
     </div >
   );
