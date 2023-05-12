@@ -328,6 +328,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   background: #F7F7F7;
   z-index: 2;
@@ -491,7 +492,7 @@ header {
   background: rgba(255, 168, 241, 0.37);
   filter: blur(50px);
   top: 150px;
-  left: 700px;
+  left: 50%;
   transform: translate(70%, -15%);
   z-index: -1;
 
@@ -503,7 +504,7 @@ header {
   filter: blur(50px);
   transform: translate(70%, -15%);
   top: 300px;
-  left: 700px;
+  left: 50%;
   z-index: -1;
 }
 
@@ -834,4 +835,98 @@ header {
 
 .promotion__scroll_type_active {
   background: #E7426A;
+}
+
+.holidays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.holidays__title {
+  margin: 0;
+  padding: 0;
+  max-width: 382px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #292929;
+  margin-top: 93px;
+}
+
+.holidays__block {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 67px;
+  margin-bottom: 108px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+}
+
+
+
+.holidays__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.holidays__block::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  bottom: 105px;
+  border: 2px dashed #D2D2D2;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.holidays__img {
+  margin: 0;
+  padding: 0;
+  width: 51px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+.holidays__item_type_important {
+  position: relative;
+}
+
+.holidays__img_type_important {
+  position: absolute;
+  top: -16%;
+  left: 46%;
+}
+
+
+.holidays__name {
+  margin: 0;
+  padding: 0;
+  min-height: 70px;
+  margin-top: 22px;
+  max-width: 170px;
+  word-wrap: break-word;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #292929;
+  align-self: flex-start;
+
 }

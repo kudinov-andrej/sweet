@@ -1,8 +1,9 @@
 import './App.css';
 import Header from './header/Header';
+import Holidays from './Holidays';
 import LoveBlock from './LoveBlock';
 import Navigation from './navigation/Navigation';
-import Promotion from './Promotion'
+import Promotion from './promotion/Promotion';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <LoveBlock />
         <Navigation />
         <Promotion />
+        <Holidays />
       </main>
     </div >
   );

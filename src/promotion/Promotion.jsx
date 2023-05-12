@@ -1,8 +1,8 @@
-import './App.css';
+import '../App.css';
 import React, { useRef, useEffect, useState } from 'react';
-import { CardPromotion } from './constants/promotiomConst/promotiomConst.js'
+import { CardPromotion } from '../constants/promotiomConst/promotiomConst.js'
 import PromotionCard from './PromotionCard'
-import Scroll from './Scroll';
+import Scroll from '../Scroll';
 
 
 
