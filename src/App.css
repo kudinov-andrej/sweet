@@ -936,6 +936,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1440px;
 }
 
 .popular-sets__title {
@@ -955,6 +956,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 35px;
+
 }
 
 .popular-sets__block div:nth-child(n+7) {
