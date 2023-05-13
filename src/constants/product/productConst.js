@@ -168,6 +168,26 @@ const productsPopular = [
             chocolate: 7,
         },
     },
+    {
+        vendorCode: '9',
+        srcProduct: hard,
+        altProduct: 'Изображение сердца',
+        title: 'Сердце',
+        description: '24 штуки в коробке в виде сердца. Ассорти из 6 вкусов. Прекрасный выбор для любого праздника',
+        productPrice: 2800,
+        delivery: true,
+        pickup: true,
+        present: false,
+        detailedDescription: 'Кондитерское изделие макаронс в виде сердца',
+        compound: 'Сахар, миндальная мука, белки яиц, красители: Е102, Е122, Е124, Е150d, ароматизаторы: ванилин, банан, клубника, карамель, манго, виноград',
+        storageCondition: 'Хранить при температуре от +2 до +4 градусов Цельсия',
+        tastes: {
+            apple: 4,
+            orange: 4,
+            tangerine: 4,
+            chocolate: 8,
+        },
+    },
 ];
 
 export { productsPopular }

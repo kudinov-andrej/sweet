@@ -7,13 +7,19 @@ import Navigation from './navigation/Navigation';
 import Promotion from './promotion/Promotion';
 import PopularSet from './popularSet/PopularSet';
 import NewsBlock from './news/NewsBlock';
+import CareBlock from './care/CareBlock';
+
 
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
-  const [openBlock, setOpenBlock] = useState(false);
+  const [openBlockSet, setOpenBlockSet] = useState(false);
+  const [openBlockNews, setOpenBlockNews] = useState(false);
 
   function hendleOpenButton() {
-    setOpenBlock(!openBlock)
+    setOpenBlockSet(!openBlockSet)
+  }
+  function hendleOpenButtonNews() {
+    setOpenBlockNews(!openBlockNews)
   }
 
   // скролл в блоке Promotion
@@ -56,12 +62,13 @@ function App() {
         <Holidays />
         <PopularSet
           hendleOpenButton={hendleOpenButton}
-          openBlock={openBlock}
+          openBlockSet={openBlockSet}
         />
         <NewsBlock
-          hendleOpenButton={hendleOpenButton}
-          openBlock={openBlock}
+          hendleOpenButtonNews={hendleOpenButtonNews}
+          openBlockNews={openBlockNews}
         />
+        <CareBlock />
       </main>
     </div >
   );

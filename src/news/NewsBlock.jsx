@@ -8,13 +8,13 @@ function NewsBlock(props) {
 
 
     function hendleOpenClick() {
-        props.hendleOpenButton()
+        props.hendleOpenButtonNews()
     }
 
     return (
         <section className="news">
             <h2 className="news__title">Новости</h2>
-            <div className={props.openBlock ? "news__block news__block-open" : "news__block"}>
+            <div className={props.openBlockNews ? "news__block news__block-open" : "news__block"}>
                 {news.map((news, id) =>
                     < NewsItem
                         key={id}
@@ -27,7 +27,7 @@ function NewsBlock(props) {
                 )}
             </div>
             <button onClick={hendleOpenClick} type="button"
-                className='button'>{props.openBlock ? "Скрыть новости" : "Показать все новости"}</button>
+                className='button'>{props.openBlockNews ? "Скрыть новости" : "Показать все новости"}</button>
         </section>
     );
 }

@@ -15,7 +15,7 @@ function PopularSet(props) {
     return (
         <section className="popular-sets">
             <h2 className="popular-sets__title">Популярные наборы</h2>
-            <div className={props.openBlock ? "popular-sets__block popular-sets__block-open" : "popular-sets__block"}>
+            <div className={props.openBlockSet ? "popular-sets__block popular-sets__block-open" : "popular-sets__block"}>
                 {productsPopular.map((card, vendorCode) =>
                     < Product
                         key={vendorCode}
@@ -29,7 +29,7 @@ function PopularSet(props) {
 
             </div>
             <button onClick={hendleOpenClick} type="button"
-                className='button'>{props.openBlock ? "Скрыть наборы" : "Показать все наборы"}</button>
+                className='button'>{props.openBlockSet ? "Скрыть наборы" : "Показать все наборы"}</button>
         </section>
     );
 }
