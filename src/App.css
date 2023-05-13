@@ -4,6 +4,7 @@
 }
 
 header {
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -929,4 +930,168 @@ header {
   color: #292929;
   align-self: flex-start;
 
+}
+
+.popular-sets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-sets__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+  max-width: 340px;
+  font-weight: 600;
+  word-wrap: break-word;
+  font-size: 30px;
+  line-height: 37px;
+  color: #292929
+}
+
+.popular-sets__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.popular-sets__block div:nth-child(n+7) {
+  display: none;
+}
+
+.popular-sets__block-open div:nth-child(n+7) {
+  display: grid;
+}
+
+.product__card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid #EDEDF0;
+}
+
+.product__img {
+  margin: 0;
+  padding: 0;
+  max-width: 370px;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.product__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 21px;
+  margin-bottom: 14px;
+  margin-left: 21px;
+  max-width: 340px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #292929;
+}
+
+.product__description {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
+  margin-left: 21px;
+  max-width: 340px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+  opacity: 0.8;
+  text-align: start;
+}
+
+.product__buy-block {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid #EDEDF0;
+}
+
+.product__price {
+  margin: 0;
+  padding: 0;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-right: 72px;
+  padding-left: 21px;
+  text-align: start;
+  word-wrap: break-word;
+  width: 127px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #E7426A;
+}
+
+.buy-button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid #EDEDF0;
+  transition: 1s;
+}
+
+.buy-button:hover {
+  background: #D4E9F9;
+}
+
+.buy-button__basket-img {
+  background-image: url(./image/header/корзина.svg);
+  width: 14px;
+  height: 19px;
+  margin: 13px 11px 18px 23px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.buy-button__text {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 18px;
+  padding-right: 28px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #4E9DD3;
+  border-radius: 3px;
+  width: 293px;
+  height: 52px;
+  background: #F7F7F7;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.button:hover {
+  background: #D4E9F9;
 }

@@ -1,5 +1,5 @@
 import '../App.css';
-
+import React from 'react';
 import HeaderAnimationBlock from './HeaderAnimationBlock';
 import HeaderNavigation from './HeaderNavigation';
 import HeaderImportentNavigation from './HeaderImportentNavigation';
