@@ -4,7 +4,6 @@ import React from 'react';
 
 function Scroll(props) {
 
-
     return (
 
         <div className='promotion__scroll-block'>

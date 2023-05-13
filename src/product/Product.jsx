@@ -3,7 +3,7 @@ import '../App.css';
 import BuyButton from './BuyButton'
 
 function Product(props) {
-    console.log(props)
+
     return (
         <div className='product__card'>
             <img className='product__img' src={props.srcProduct} alt={props.altProduct} />
