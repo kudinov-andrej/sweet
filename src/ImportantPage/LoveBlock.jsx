@@ -1,5 +1,5 @@
-import './App.css';
-import { hardImg } from './constants/love/loveConstants.js'
+import '../App.css';
+import { hardImg } from '../constants/love/loveConstants.js'
 
 
 function LoveBlock() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import CareItem from '../care/CareItem'
-import { careInfo } from '../constants/careConst'
+import { careInfo } from '../../constants/careConst'
 
 
 function CareBlock() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import Product from '../product/Product'
-import { productsPopular } from '../constants/product/productConst.js'
+import { productsPopular } from '../../constants/product/productConst.js'
 
 
 

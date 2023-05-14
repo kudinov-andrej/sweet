@@ -1,5 +1,5 @@
-import '../App.css';
-import { navigationConst } from '../constants/navigation/navigationConst.js'
+import '../../App.css';
+import { navigationConst } from '../../constants/navigation/navigationConst.js'
 import NavigationPunct from './NavigationPunct'
 import React from 'react';
 

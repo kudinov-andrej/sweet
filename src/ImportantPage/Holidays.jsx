@@ -1,12 +1,12 @@
-import './App.css';
+import '../App.css';
 
-import macaronOne from './image/holidays/Макаронс1.png';
-import macaronTwo from './image/holidays/Шапка.png';
-import macaronThree from './image/holidays/макаронс2.png';
-import macaronFore from './image/holidays/макаронс3.png';
-import macaronFive from './image/holidays/макаронс4.png';
-import macaronSix from './image/holidays/макаронс5.png';
-import macaronSeven from './image/holidays/макаронс6.png';
+import macaronOne from '../image/holidays/Макаронс1.png';
+import macaronTwo from '../image/holidays/Шапка.png';
+import macaronThree from '../image/holidays/макаронс2.png';
+import macaronFore from '../image/holidays/макаронс3.png';
+import macaronFive from '../image/holidays/макаронс4.png';
+import macaronSix from '../image/holidays/макаронс5.png';
+import macaronSeven from '../image/holidays/макаронс6.png';
 
 
 function Holidays() {

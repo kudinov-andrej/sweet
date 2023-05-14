@@ -1,14 +1,10 @@
 import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import Header from './header/Header';
-import Holidays from './Holidays';
-import LoveBlock from './LoveBlock';
-import Navigation from './navigation/Navigation';
-import Promotion from './promotion/Promotion';
-import PopularSet from './popularSet/PopularSet';
-import NewsBlock from './news/NewsBlock';
-import CareBlock from './care/CareBlock';
+import ImportantPage from './ImportantPage/ImportantPage';
+import Footer from "./Footer"
 
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
@@ -52,24 +48,20 @@ function App() {
   return (
     <div className="App">
       < Header />
-      <main className='page'>
-        <LoveBlock />
-        <Navigation />
-        <Promotion
-          contentRef={contentRef}
-          activePoint={activePoint}
+      <Routes>
+        <Route path="/"
+          element={<ImportantPage
+            contentRef={contentRef}
+            activePoint={activePoint}
+            hendleOpenButton={hendleOpenButton}
+            openBlockSet={openBlockSet}
+            hendleOpenButtonNews={hendleOpenButtonNews}
+            openBlockNews={openBlockNews}
+          />}
         />
-        <Holidays />
-        <PopularSet
-          hendleOpenButton={hendleOpenButton}
-          openBlockSet={openBlockSet}
-        />
-        <NewsBlock
-          hendleOpenButtonNews={hendleOpenButtonNews}
-          openBlockNews={openBlockNews}
-        />
-        <CareBlock />
-      </main>
+
+      </Routes>
+      <Footer />
     </div >
   );
 }

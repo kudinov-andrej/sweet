@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import NewsItem from '../news/NewsItem'
-import { news } from '../constants/news/newsConst.js'
+import { news } from '../../constants/news/newsConst.js'
 
 
 function NewsBlock(props) {
