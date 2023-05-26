@@ -19,11 +19,14 @@ function PopularSet(props) {
                 {productsPopular.map((card, vendorCode) =>
                     < Product
                         key={vendorCode}
+                        vendorCode={card.vendorCode}
+                        addToCart={props.addToCart}
                         srcProduct={card.srcProduct}
                         altProduct={card.altProduct}
                         title={card.title}
                         description={card.description}
                         productPrice={card.productPrice}
+                        tastes={card.tastes}
                     />
                 )}
 

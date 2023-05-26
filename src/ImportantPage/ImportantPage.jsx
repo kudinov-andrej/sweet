@@ -11,6 +11,8 @@ import CareBlock from './care/CareBlock';
 
 function ImportantPage(props) {
 
+
+
     return (
         <main className='page'>
             <LoveBlock />
@@ -21,6 +23,7 @@ function ImportantPage(props) {
             />
             <Holidays />
             <PopularSet
+                addToCart={props.addToCart}
                 hendleOpenButton={props.hendleOpenButton}
                 openBlockSet={props.openBlockSet}
             />

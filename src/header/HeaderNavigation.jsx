@@ -1,7 +1,10 @@
 import '../App.css';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function HeaderNavigation() {
+function HeaderNavigation(props) {
+
+    const cartItems = props.cartItems || { cartItems: [] };
     return (
         <nav className='header__navigation'>
             <ul className='header__navigation-block'>
@@ -18,12 +21,14 @@ function HeaderNavigation() {
                 <div className='header__phone-img'></div>
                 <p className='header__phone-name'>8-928-470-23-12</p>
             </div>
-            <div className='header__basket'>
-                <div className='header__basket-img'>
-                    <p className='header__basket-quantity'>4</p>
+            <NavLink className='header__navigation-basket' to='/basket'>
+                <div className='header__basket'>
+                    <div className='header__basket-img'>
+                        <p className='header__basket-quantity'>{cartItems.cartItems.length}</p>
+                    </div>
+                    <p className='header__basket-name'>В корзине( {cartItems.cartItems.length} макаронс)</p>
                 </div>
-                <p className='header__basket-name'>В корзине(4 товара)</p>
-            </div>
+            </NavLink>
             <ul className='header__sotial-block'>
                 <li className='header__sotial-link header__sotial-link_type_tg'></li>
                 <li className='header__sotial-link header__sotial-link_type_vk'></li>

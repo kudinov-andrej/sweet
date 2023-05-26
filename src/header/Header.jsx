@@ -4,11 +4,14 @@ import HeaderAnimationBlock from './HeaderAnimationBlock';
 import HeaderNavigation from './HeaderNavigation';
 import HeaderImportentNavigation from './HeaderImportentNavigation';
 
-function Header() {
+function Header(cartItems) {
+
+
     return (
         <header className='header' >
             <HeaderAnimationBlock />
-            <HeaderNavigation />
+            <HeaderNavigation
+                cartItems={cartItems} />
             <HeaderImportentNavigation />
         </header>
     );

@@ -1,8 +1,21 @@
-import React from 'react';
+//import React from 'react';
 import '../../App.css';
 import BuyButton from './BuyButton'
-
 function Product(props) {
+
+    const addToCartInBasket = () => {
+        props.addToCart({
+            id: props.vendorCode,
+            title: props.title,
+            productPrice: props.productPrice,
+            srcProduct: props.srcProduct,
+            altProduct: props.altProduct,
+            tastes: props.tastes,
+            quantity: 1,
+        });
+
+    }
+
 
     return (
         <div className='product__card'>
@@ -11,7 +24,9 @@ function Product(props) {
             <p className='product__description'>{props.description}</p>
             <div className='product__buy-block'>
                 <p className='product__price'>{props.productPrice} руб</p>
-                <BuyButton />
+                <BuyButton onClick={() => {
+                    addToCartInBasket();
+                }} />
             </div>
         </div>
     );

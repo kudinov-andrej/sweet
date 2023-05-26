@@ -185,6 +185,13 @@ header {
   background-size: cover;
 }
 
+.header__navigation-basket {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+}
+
 .header__basket {
   margin: 0;
   padding: 0;
@@ -192,6 +199,9 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: rgba(0, 0, 0, 0.79);
+  text-decoration: none;
+
 }
 
 .header__basket-img {
@@ -206,6 +216,11 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
 
+}
+
+.header__basket-name {
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .header__basket-quantity {
@@ -223,6 +238,7 @@ header {
   line-height: 12px;
   text-align: center;
   color: #FFFFFF;
+  text-decoration: none;
 }
 
 .header__sotial-block {
@@ -322,6 +338,7 @@ header {
 
 .page {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .love {
@@ -707,7 +724,6 @@ header {
 .promotion {
   margin: 0;
   padding: 0;
-
   margin-top: 94px;
   display: flex;
   flex-direction: column;
@@ -752,6 +768,7 @@ header {
 
 .promotion__block {
   scrollbar-width: none;
+  gap: 30px;
 }
 
 .promotion__block::-webkit-scrollbar {
@@ -764,8 +781,7 @@ header {
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
-  max-width: 270px;
+  width: 50%;
   position: relative;
 }
 
@@ -936,7 +952,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  max-width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .popular-sets__title {
@@ -953,10 +971,9 @@ header {
 
 .popular-sets__block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
   margin-bottom: 35px;
-
 }
 
 .popular-sets__block div:nth-child(n+7) {
@@ -964,7 +981,8 @@ header {
 }
 
 .popular-sets__block-open div:nth-child(n+7) {
-  display: grid;
+  display: flex;
+
 }
 
 .product__card {
@@ -980,8 +998,7 @@ header {
 .product__img {
   margin: 0;
   padding: 0;
-  max-width: 370px;
-  max-height: 300px;
+  max-width: 25.69%;
   object-fit: cover;
   object-position: center;
 
@@ -1112,8 +1129,8 @@ header {
 .product__img {
   margin: 0;
   padding: 0;
-  max-width: 370px;
-  max-height: 300px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
 
@@ -1153,16 +1170,17 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  max-width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 
 .news__block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
   margin-bottom: 35px;
-
 }
 
 .news__block div:nth-child(n+4) {
@@ -1170,13 +1188,15 @@ header {
 }
 
 .news__block-open div:nth-child(n+4) {
-  display: grid;
+  display: flex;
 }
 
 
 .news__card {
   margin: 0;
   padding: 0;
+  width: 100%;
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1190,8 +1210,8 @@ header {
 .news__card-img {
   margin: 0;
   padding: 0;
-  max-width: 370px;
-  max-height: 210px;
+  width: 100%;
+  max-height: auto;
   object-fit: cover;
   object-position: center;
 
@@ -1264,8 +1284,10 @@ header {
 
 
 .care__block {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  margin-bottom: 35px;
 
 }
 
@@ -1286,8 +1308,8 @@ header {
 .care__card-img {
   margin: 0;
   padding: 0;
-  max-width: 270px;
-  max-height: 270px;
+  width: 100%;
+  max-height: auto;
   object-fit: cover;
   object-position: center;
 
@@ -1507,4 +1529,172 @@ header {
 .footer__navigation_typy_icon {
   display: flex;
   flex-direction: row;
+}
+
+/*корзина  */
+
+.basket {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  background: #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basket__navigation-block {
+  margin: 0;
+  padding: 0;
+  margin-top: 34px;
+}
+
+.basket__navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+}
+
+.basket__navigation-punct {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(41, 41, 41, 0.46);
+}
+
+.basket__navigation-punct_active {
+  color: #4E9DD3;
+}
+
+.basket__navigation-punct:hover {
+  scale: 1.05;
+}
+
+.basket__title {
+  margin: 0;
+  padding: 0;
+  max-width: 230px;
+  margin-top: 27px;
+  margin-bottom: 9px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #292929;
+}
+
+.basket__info {
+  margin: 0;
+  padding: 0;
+  max-width: 288px;
+  margin-bottom: 34px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #292929;
+  opacity: 0.7;
+
+}
+
+.goods-list {
+  margin: 0;
+  padding: 0;
+  width: 46.52%;
+  max-width: 670px;
+  margin-left: 9.375%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.Goods-list__product-item {
+  margin: 0;
+  padding: 0;
+  margin-left: 17px;
+  margin-bottom: 33px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.product-item__img {
+  width: 80px;
+  height: 80px;
+  margin-top: 35px;
+  margin-right: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-item__information {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  max-width: 201px;
+}
+
+.product__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+}
+
+.product__tastes-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: start;
+}
+
+.product__button-conteiner {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5.2%;
+}
+
+
+.product__button-quantity {
+  border: none;
+  background: none;
+}
+
+.product__quantity {
+  margin: 0;
+  padding: 0;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+.product-price {
+  margin-right: 32px;
 }
