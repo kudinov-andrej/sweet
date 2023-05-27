@@ -1,16 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import '../App.css';
-import { useState } from 'react';
 import ProductItem from './ProductItem'
 
 function BasketPage(props) {
-    const [quantity, setQuantity] = useState(props.quantity);
-
-    function getTotalPrice() {
-        return props.cartItems.reduce((total, item) => total + item.productPrice * item.quantity, 0);
-    }
-
-
 
     return (
         <section className='basket'>
@@ -20,7 +12,8 @@ function BasketPage(props) {
                     <NavLink className={({ isActive }) => `basket__navigation-punct ${isActive ? "basket__navigation-punct_active" : ""}`} to='/basket' >Корзина</NavLink>
                 </nav>
                 <h2 className='basket__title'>Ваша корзина</h2>
-                <p className='basket__info'>{props.cartItems.length} макаронс / {getTotalPrice()} рублей</p>
+
+                <p className='basket__info'>{props.cartItems.length} макаронс /  {props.getTotalPrice()} рублей</p>
             </div>
             <div className='goods-list'>
                 {props.cartItems.map((card, id) =>
@@ -33,12 +26,14 @@ function BasketPage(props) {
                         description={card.description}
                         productPrice={card.productPrice}
                         tastes={card.tastes}
-                        quantity={card.quantity}
-                        getTotalPrice={getTotalPrice}
-                        setQuantity={setQuantity}
+                        incrementQuantityProductInBasket={props.incrementQuantityProductInBasket}
+                        dicrementQuantityProductInBasket={props.dicrementQuantityProductInBasket}
+                        quantity={props.quantity}
+                        cartItems={props.cartItems}
+                        addToCart={props.addToCart}
+
                     />
                 )}
-
             </div>
         </section >
     );

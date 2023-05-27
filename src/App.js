@@ -56,13 +56,18 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
+  const addToCart = (product, dicrement) => {
     // проверяем, coесть ли уже такой товар в корзине
     const existingCartItem = cartItems.find(item => item.id === product.id);
     if (existingCartItem) {
       // если товар уже есть - увеличиваем его количество на 1
       const updatedCartItems = cartItems.map(item => {
-        if (item.id === product.id) {
+        if (item.id === product.id && dicrement) {
+          return {
+            ...item,
+            quantity: item.quantity - 1
+          };
+        } else if (item.id === product.id) {
           return {
             ...item,
             quantity: item.quantity + 1
@@ -81,6 +86,31 @@ function App() {
     }
   }
 
+  const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  function getTotalPrice() {
+    const newTotalPrice = cartItems.reduce((total, item) => total + item.productPrice * item.quantity, 0);
+    setTotalPrice(newTotalPrice);
+    return newTotalPrice;
+  }
+
+  useEffect(() => {
+    getTotalPrice()
+  }, [cartItems, quantity])
+
+
+  function incrementQuantityProductInBasket() {
+    setQuantity(quantity + 1)
+  }
+
+  function dicrementQuantityProductInBasket() {
+    setQuantity(quantity - 1)
+
+  }
+
+
+
   return (
     <div className="App">
       < Header
@@ -95,13 +125,18 @@ function App() {
             openBlockSet={openBlockSet}
             hendleOpenButtonNews={hendleOpenButtonNews}
             openBlockNews={openBlockNews}
+            quantity={quantity}
             addToCart={addToCart}
-
           />}
         />
         <Route path="/basket"
           element={<BasketPage
             cartItems={cartItems}
+            quantity={quantity}
+            incrementQuantityProductInBasket={incrementQuantityProductInBasket}
+            dicrementQuantityProductInBasket={dicrementQuantityProductInBasket}
+            getTotalPrice={getTotalPrice}
+            addToCart={addToCart}
           />}
         />
       </Routes>

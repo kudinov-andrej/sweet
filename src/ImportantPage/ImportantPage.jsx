@@ -26,6 +26,7 @@ function ImportantPage(props) {
                 addToCart={props.addToCart}
                 hendleOpenButton={props.hendleOpenButton}
                 openBlockSet={props.openBlockSet}
+                quantity={props.quantity}
             />
             <NewsBlock
                 hendleOpenButtonNews={props.hendleOpenButtonNews}

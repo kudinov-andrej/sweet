@@ -1,24 +1,25 @@
 import '../App.css';
-import { useState, useEffect } from 'react';
+
 
 
 function ProductItem(props) {
 
-    const [quantity, setQuantity] = useState(props.quantity);
-
-    useEffect(() => {
-        props.getTotalPrice()
-        console.log("вызвался эффект")
-    }, [quantity])
+    const cartItem = props.cartItems.find(item => item.id === props.id);
 
     function increment() {
-        setQuantity(quantity + 1)
-
+        props.addToCart({
+            ...cartItem,
+            quantity: cartItem.quantity + 1,
+        }, props.dicrement);
     }
 
-    function dicrement() {
-        setQuantity(quantity - 1)
-
+    function decrement() {
+        if (cartItem.quantity > 0) {
+            props.addToCart({
+                ...cartItem,
+                quantity: cartItem.quantity - 1
+            }, !props.dicrement);
+        }
     }
 
     return (
@@ -34,12 +35,12 @@ function ProductItem(props) {
                     ))}
                 </ul>
             </div>
-            <div className='product__button-conteiner'>
-                <button className='product__button-quantity' onClick={dicrement}>-</button>
-                <p className='product__quantity'>{quantity}</p>
+            <div className='product__button-container'>
+                <button className='product__button-quantity' onClick={decrement}>-</button>
+                <p className='product__quantity'>{cartItem.quantity}</p>
                 <button className='product__button-quantity' onClick={increment}>+</button>
             </div>
-            <p className='product-price'>Цена: {props.productPrice * quantity}</p>
+            <p className='product-price'>Цена: {props.productPrice * cartItem.quantity}</p>
         </div>
     );
 }

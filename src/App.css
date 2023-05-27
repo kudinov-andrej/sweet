@@ -1676,7 +1676,7 @@ header {
   text-align: start;
 }
 
-.product__button-conteiner {
+.product__button-container {
   display: flex;
   flex-direction: row;
   margin-right: 5.2%;

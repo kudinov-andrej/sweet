@@ -11,7 +11,8 @@ function Product(props) {
             srcProduct: props.srcProduct,
             altProduct: props.altProduct,
             tastes: props.tastes,
-            quantity: 1,
+            quantity: props.quantity,
+
         });
 
     }

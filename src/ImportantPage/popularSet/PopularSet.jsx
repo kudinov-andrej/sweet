@@ -27,6 +27,7 @@ function PopularSet(props) {
                         description={card.description}
                         productPrice={card.productPrice}
                         tastes={card.tastes}
+                        quantity={props.quantity}
                     />
                 )}
 
