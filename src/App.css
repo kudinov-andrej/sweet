@@ -1630,12 +1630,11 @@ header {
   margin: 0;
   padding: 0;
   margin-left: 17px;
-  margin-bottom: 33px;
-  margin-bottom: 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  border-bottom: 1px solid #EDEDF0;
 
 }
 
@@ -1644,6 +1643,7 @@ header {
   height: 80px;
   margin-top: 35px;
   margin-right: 15px;
+  padding-bottom: 39px;
   object-fit: cover;
   object-position: center;
 }
@@ -1656,6 +1656,7 @@ header {
   flex-direction: column;
   align-self: flex-start;
   max-width: 201px;
+
 }
 
 .product__title {
@@ -1679,13 +1680,15 @@ header {
 .product__button-container {
   display: flex;
   flex-direction: row;
-  margin-right: 5.2%;
+  width: 100px;
+  justify-content: center;
 }
 
 
 .product__button-quantity {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .product__quantity {
@@ -1697,4 +1700,160 @@ header {
 
 .product-price {
   margin-right: 32px;
+  width: 25%;
+}
+
+.basket__total-price_conteiner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 26px;
+  margin-right: 26px;
+}
+
+.basket__total-price_text {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+  max-width: 408px;
+}
+
+.basket__total-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #E7426A;
+  margin-bottom: 33px;
+}
+
+.dilivery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basket__dilivery-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+  max-width: 280px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #292929;
+}
+
+.basket__dilivery-subtitle {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #292929;
+  opacity: 0.7;
+}
+
+.basket__input-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.basket__input-conteiner {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.basket__input-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.basket__form-label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+  text-align: start;
+}
+
+.basket__form-input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-height: 50px;
+  margin-right: 14px;
+  min-width: 328px;
+  padding-left: 14px;
+  margin-bottom: 24px;
+}
+
+.basket__form-button {
+  width: 342px;
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 14px;
+  margin-bottom: 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #FFFFFF;
+}
+
+.basket__form-button:focus {
+  border: #E7426A solid 1px;
+}
+
+.basket__form-button_tupe_free {
+  margin-top: 22px;
+  margin-right: 0;
+}
+
+.basket__form-button-img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  object-position: center;
+  margin-right: 18px;
+}
+
+.basket__form-button-text {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  margin-bottom: 4px;
+  max-width: 160px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+}
+
+.basket__form-button-price {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  max-width: 160px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #E7426A;
 }
