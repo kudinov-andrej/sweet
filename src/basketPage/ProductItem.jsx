@@ -26,8 +26,8 @@ function ProductItem(props) {
         <div className='Goods-list__product-item'>
             <img className='product-item__img' src={props.srcProduct} alt={props.altProduct} />
             <div className='product-item__information'>
-                <h2 className='product__title'>{props.title}</h2>
-                <ul className='product__tastes-list'>
+                <h2 className='product-item__title'>{props.title}</h2>
+                <ul className='product-item__tastes-list'>
                     {Object.keys(props.tastes).map((key) => (
                         <li className='product__tastes-item' key={key}>
                             {key}: {props.tastes[key]}

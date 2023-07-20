@@ -11,6 +11,8 @@ function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
   const [openBlockSet, setOpenBlockSet] = useState(false);
   const [openBlockNews, setOpenBlockNews] = useState(false);
+  // устанавливаем скидку по промокоду 
+  const [discountsValue, setDiscountsValue] = useState(0);
 
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
@@ -87,7 +89,10 @@ function App() {
   }
 
   const [quantity, setQuantity] = useState(1);
+  // стейт для хранение стоимости товаров в корзине
   const [totalPrice, setTotalPrice] = useState(0);
+  // стейт для учета стоимости доставки
+  const [expressDelivery, setExpressDelivery] = useState(false);
 
   function getTotalPrice() {
     const newTotalPrice = cartItems.reduce((total, item) => total + item.productPrice * item.quantity, 0);
@@ -137,6 +142,10 @@ function App() {
             dicrementQuantityProductInBasket={dicrementQuantityProductInBasket}
             getTotalPrice={getTotalPrice}
             addToCart={addToCart}
+            expressDelivery={expressDelivery}
+            setExpressDelivery={setExpressDelivery}
+            discountsValue={discountsValue}
+            setDiscountsValue={setDiscountsValue}
           />}
         />
       </Routes>

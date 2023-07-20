@@ -1546,7 +1546,7 @@ header {
 .basket__buy-block {
   margin: 0;
   padding: 0;
-  width: 46.52%;
+  width: 100%;
   margin-left: 9.375%;
   background: #E5E5E5;
   display: flex;
@@ -1622,6 +1622,9 @@ header {
 
 }
 
+
+
+
 .goods-list {
   margin: 0;
   padding: 0;
@@ -1670,7 +1673,7 @@ header {
 
 }
 
-.product__title {
+.product-item__title {
   margin: 0;
   padding: 0;
   margin-top: 20px;
@@ -1681,7 +1684,7 @@ header {
   color: #292929;
 }
 
-.product__tastes-list {
+.product-item__tastes-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1743,6 +1746,240 @@ header {
   margin-bottom: 33px;
 }
 
+.basket__buy {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.basket__order-block {
+  margin: 0;
+  padding: 0;
+  max-width: 473px;
+  border-radius: 5px;
+  border: 1px solid #EDEDF0;
+  background: #FFF;
+}
+
+.order-block__title {
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+  margin-top: 29px;
+  margin-bottom: 10px;
+  max-width: 300px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #292929;
+
+}
+
+.order-block__info-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-block__info-punkt {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.info-punkt__text {
+  margin: 0;
+  padding: 0;
+  max-width: 229px;
+  color: #292929;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.info-punkt__price {
+  margin: 0;
+  padding: 0;
+  max-width: 100px;
+  color: #292929;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.order-block__total-price {
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  margin-left: 30px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #EDEDF0;
+  border-top: solid 1px #EDEDF0;
+}
+
+.total-price__price {
+  margin: 0;
+  padding: 0;
+  max-width: 120px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.total-price__text {
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  max-width: 229px;
+  color: #292929;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+}
+
+.order-block__form {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-block__form-conteiner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.order-block__form-text {
+  margin: 0;
+  padding: 0;
+  margin-right: 13px;
+  color: var(--292929, #292929);
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.order-block__input-conteiner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--ededf-0, #EDEDF0);
+  background: #F7F7F7;
+}
+
+.order-block__input {
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  text-align: left;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  border: none;
+  background: #F7F7F7;
+  border-bottom: 1px solid #F7F7F7;
+}
+
+.order-block__input:focus {
+  outline: none;
+  border-bottom: 1px solid #E7426A;
+}
+
+.order-block__input-button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 118px;
+  border: none;
+  background-color: #E7426A;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.order-block__form-button {
+  margin: 0;
+  padding: 0;
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 20px;
+  margin-bottom: 31px;
+  border: none;
+  width: 254px;
+  height: 50px;
+  background-color: #E7426A;
+  border-bottom: 1px solid #E7426A;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  transition: scale 0.3s ease;
+}
+
+.order-block__form-button:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.order-block__form-error {
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  color: red;
+}
+
 .dilivery {
   display: flex;
   flex-direction: column;
@@ -1775,6 +2012,13 @@ header {
   text-align: center;
   color: #292929;
   opacity: 0.7;
+}
+
+.basket__form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .basket__form-conteiner {
@@ -1853,7 +2097,12 @@ header {
   background: #FFFFFF;
 }
 
+/*
 .basket__form-button:focus {
+  border: #E7426A solid 1px;
+}
+*/
+.basket__form-button_on {
   border: #E7426A solid 1px;
 }
 
@@ -1937,6 +2186,7 @@ header {
   gap: 42px;
   width: 100%;
   max-width: 670px;
+
 }
 
 .basket__checkbox-conteiner {
@@ -2005,4 +2255,91 @@ header {
   background-position: center center;
   background-size: contain;
 
+}
+
+.basket__final-price {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 47px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #292929;
+  border-top: solid 1px #292929;
+}
+
+.basket__final-price-text {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #292929;
+  font-family: Proxima Nova;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  max-width: 300px;
+}
+
+.basket__final-price-price {
+  margin: 0;
+  padding: 0;
+  max-width: 150px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #E7426A;
+}
+
+.button__order-goods {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  border: none;
+  width: 254px;
+  height: 50px;
+  background-color: #E7426A;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  transition: scale 0.3s ease;
+}
+
+.button__order-goods:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.basket__text-agreement {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 43px;
+  width: 100%;
+  max-width: 670px;
+  font-family: Proxima Nova;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.basket__link-agreement {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #4E9DD3;
+}
+
+.basket__link-agreement:hover {
+  cursor: pointer;
 }
