@@ -1757,7 +1757,10 @@ header {
 .basket__order-block {
   margin: 0;
   padding: 0;
+  margin-right: 30px;
+  width: 36%;
   max-width: 473px;
+  max-height: 407px;
   border-radius: 5px;
   border: 1px solid #EDEDF0;
   background: #FFF;
@@ -1766,6 +1769,7 @@ header {
 .order-block__title {
   margin: 0;
   padding: 0;
+  text-align: start;
   margin-left: 30px;
   margin-top: 29px;
   margin-bottom: 10px;
@@ -1870,6 +1874,8 @@ header {
 .order-block__form {
   margin: 0;
   padding: 0;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -1930,7 +1936,8 @@ header {
   padding: 0;
   cursor: pointer;
   height: 40px;
-  width: 118px;
+  width: 30%;
+  max-width: 118px;
   border: none;
   background-color: #E7426A;
   color: #FFF;
@@ -1947,7 +1954,6 @@ header {
   padding: 0;
   margin-left: 110px;
   margin-right: 110px;
-  margin-top: 20px;
   margin-bottom: 31px;
   border: none;
   width: 254px;
@@ -1973,12 +1979,18 @@ header {
 .order-block__form-error {
   margin: 0;
   padding: 0;
-  margin-top: 8px;
+  margin-left: 110px;
+  margin-top: 5px;
+  width: 98%;
+  height: 24px;
   font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
   color: red;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  margin-left: 5px;
 }
+
 
 .dilivery {
   display: flex;
@@ -2072,9 +2084,21 @@ header {
   min-height: 50px;
   margin-right: 14px;
   width: 98%;
-  margin-bottom: 24px;
+  margin-bottom: 5px;
 }
 
+.basket__form-error {
+  margin: 0;
+  padding: 0;
+  width: 98%;
+  height: 24px;
+  color: red;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: start;
+  margin-left: 5px;
+}
 
 .basket__form-input_typy_phone {
   margin-right: 0;
@@ -2097,11 +2121,7 @@ header {
   background: #FFFFFF;
 }
 
-/*
-.basket__form-button:focus {
-  border: #E7426A solid 1px;
-}
-*/
+
 .basket__form-button_on {
   border: #E7426A solid 1px;
 }
@@ -2151,7 +2171,7 @@ header {
   width: 100%;
   max-width: 665px;
   height: 76px;
-  margin-bottom: 24px;
+  margin-bottom: 5px;
 }
 
 .basket__form-input_typy_date {

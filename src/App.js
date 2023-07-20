@@ -13,6 +13,7 @@ function App() {
   const [openBlockNews, setOpenBlockNews] = useState(false);
   // устанавливаем скидку по промокоду 
   const [discountsValue, setDiscountsValue] = useState(0);
+  const [discountsError, setDiscountsError] = useState("");
 
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
@@ -146,6 +147,8 @@ function App() {
             setExpressDelivery={setExpressDelivery}
             discountsValue={discountsValue}
             setDiscountsValue={setDiscountsValue}
+            discountsError={discountsError}
+            setDiscountsError={setDiscountsError}
           />}
         />
       </Routes>
