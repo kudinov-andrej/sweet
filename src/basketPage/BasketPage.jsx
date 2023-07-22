@@ -8,6 +8,10 @@ import DeliveryImgFree from '../image/delivery/картинкаРука.svg';
 import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { useFormWithValidation } from '../UseFormValidation/useFormValidation';
 
+
+import ProductForBasket from '../basketPage/ProductForBasket'
+import { productsPopular } from '../constants/product/productConst'
+
 function BasketPage(props) {
 
     const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
@@ -317,7 +321,31 @@ function BasketPage(props) {
                         <p className="basket__text-agreement">Нажимая на кнопку "Оформить заказ" Я принимаю и соглашаюсь с <a className='basket__link-agreement' href='#'>Договором оферты</a> и разрешаю обработку моих персональных данных в соответствии с <a className='basket__link-agreement' href='#'>Политикой конфиденциальности</a></p>
                     </form>
                 </div>
+                <section className="basket__product">
+                    <h2 className='basket__product-title'>Добавить в заказ</h2>
+                    <div className='basket__product-conteiner'>
+                        <button className='product-conteiner__button product-conteiner__button_type_left'>&larr;</button>
+                        <div className='basket__product-items'>
+                            {productsPopular.map((card, vendorCode) =>
+                                < ProductForBasket
+                                    key={vendorCode}
+                                    vendorCode={card.vendorCode}
+                                    addToCart={props.addToCart}
+                                    srcProduct={card.srcProduct}
+                                    altProduct={card.altProduct}
+                                    title={card.title}
+                                    description={card.description}
+                                    productPrice={card.productPrice}
+                                    tastes={card.tastes}
+                                    quantity={props.quantity}
+                                />
+                            )}
+                        </div>
+                        <button className='product-conteiner__button product-conteiner__button_type_right'>&rarr;</button>
+                    </div>
+                </section>
             </div >
+
         </section >
     );
 }
