@@ -1,6 +1,6 @@
 import React from 'react';
-import '../App.css';
-import BuyButton from '../ImportantPage/product/BuyButton'
+import '../../App.css';
+import BuyButton from '../../ImportantPage/product/BuyButton'
 
 function ProductForBasket(props) {
 
@@ -17,7 +17,6 @@ function ProductForBasket(props) {
         });
 
     }
-
 
     return (
         <div className='product__card-basket'>

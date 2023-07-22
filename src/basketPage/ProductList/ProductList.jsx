@@ -1,6 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import '../App.css';
-import ProductItem from './ProductItem'
+import '../../App.css';
+import ProductItem from '../ProductItem/ProductItem';
 
 function ProductList(props) {
 
