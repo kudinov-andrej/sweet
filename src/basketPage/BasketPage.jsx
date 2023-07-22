@@ -21,7 +21,6 @@ function BasketPage(props) {
         { code: 'SALE700', value: 700 }
     ];
 
-
     const currentDate = new Date();
     const dateMonthLater = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
     let dates = [];
@@ -88,6 +87,14 @@ function BasketPage(props) {
         })
     }
 
+
+    const handleScrollRightButtonClick = () => {
+        props.handleScrollRight();
+    };
+
+    const handleScrollLeftButtonClick = () => {
+        props.handleScrollLeft();
+    };
 
     return (
         <section className='basket'>
@@ -324,8 +331,10 @@ function BasketPage(props) {
                 <section className="basket__product">
                     <h2 className='basket__product-title'>Добавить в заказ</h2>
                     <div className='basket__product-conteiner'>
-                        <button className='product-conteiner__button product-conteiner__button_type_left'>&larr;</button>
-                        <div className='basket__product-items'>
+                        <button className='product-conteiner__button product-conteiner__button_type_left'
+                            onClick={handleScrollLeftButtonClick}
+                        >&larr;</button>
+                        <div className='basket__product-items' ref={props.contentRefBasketPage}>
                             {productsPopular.map((card, vendorCode) =>
                                 < ProductForBasket
                                     key={vendorCode}
@@ -341,7 +350,9 @@ function BasketPage(props) {
                                 />
                             )}
                         </div>
-                        <button className='product-conteiner__button product-conteiner__button_type_right'>&rarr;</button>
+                        <button className='product-conteiner__button product-conteiner__button_type_right'
+                            onClick={handleScrollRightButtonClick}
+                        >&rarr;</button>
                     </div>
                 </section>
             </div >

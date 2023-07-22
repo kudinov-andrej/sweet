@@ -57,6 +57,42 @@ function App() {
     }
   }, [location.pathname]);
 
+
+  // скролл в блоке Basket
+
+  const contentRefBasketPage = useRef(null);
+
+  const handleScrollRight = () => {
+    if (contentRefBasketPage.current) {
+      const remainingWidth = contentRefBasketPage.current.scrollWidth - contentRefBasketPage.current.offsetWidth - contentRefBasketPage.current.scrollLeft;
+      const scrollAmount = Math.min(300, remainingWidth);
+      contentRefBasketPage.current.scrollLeft += scrollAmount;
+    }
+  };
+
+  const handleScrollLeft = () => {
+    if (contentRefBasketPage.current) {
+      const scrollAmount = Math.min(300, contentRefBasketPage.current.scrollLeft);
+      contentRefBasketPage.current.scrollLeft -= scrollAmount;
+    }
+  };
+
+  useEffect(() => {
+    if (location.pathname === '/basket') {
+      if (contentRefBasketPage.current) {
+        contentRefBasketPage.current.addEventListener('scroll', handleScrollRight, false);
+        contentRefBasketPage.current.addEventListener('scroll', handleScrollLeft, false);
+      }
+    }
+    return () => {
+      if (contentRefBasketPage.current) {
+        contentRefBasketPage.current.removeEventListener('scroll', handleScrollRight, false);
+        contentRefBasketPage.current.removeEventListener('scroll', handleScrollLeft, false);
+      }
+    };
+  }, [location.pathname]);
+
+
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product, dicrement) => {
@@ -149,6 +185,9 @@ function App() {
             setDiscountsValue={setDiscountsValue}
             discountsError={discountsError}
             setDiscountsError={setDiscountsError}
+            contentRefBasketPage={contentRefBasketPage}
+            handleScrollRight={handleScrollRight}
+            handleScrollLeft={handleScrollLeft}
           />}
         />
       </Routes>

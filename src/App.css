@@ -1063,7 +1063,7 @@ header {
 .buy-button {
   margin: 0;
   padding: 0;
-  width: 127px;
+  width: 148px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1097,7 +1097,7 @@ header {
   margin-top: 15px;
   margin-bottom: 18px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   word-wrap: none;
   color: rgba(0, 0, 0, 0.88);
@@ -2407,7 +2407,12 @@ header {
   color: fff;
   position: absolute;
   top: 85px;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
 
+.product-conteiner__button:hover {
+  scale: 1.05;
 }
 
 .product-conteiner__button_type_left {
@@ -2433,7 +2438,7 @@ header {
 .product__card-basket {
   margin: 0;
   padding: 0;
-  max-width: 25%;
+  max-width: 23%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
