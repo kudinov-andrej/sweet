@@ -27,6 +27,8 @@ function ImportantPage(props) {
                 hendleOpenButton={props.hendleOpenButton}
                 openBlockSet={props.openBlockSet}
                 quantity={props.quantity}
+                setOpenPopupAddGoods={props.setOpenPopupAddGoods}
+                setTitleGoodsForPopup={props.setTitleGoodsForPopup}
             />
             <NewsBlock
                 hendleOpenButtonNews={props.hendleOpenButtonNews}

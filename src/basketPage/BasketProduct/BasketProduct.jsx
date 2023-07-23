@@ -34,6 +34,8 @@ function BasketProduct(props) {
                             productPrice={card.productPrice}
                             tastes={card.tastes}
                             quantity={props.quantity}
+                            setOpenPopupAddGoods={props.setOpenPopupAddGoods}
+                            setTitleGoodsForPopup={props.setTitleGoodsForPopup}
                         />
                     )}
                 </div>

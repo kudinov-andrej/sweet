@@ -24,6 +24,7 @@ function BasketPage(props) {
                         dicrementQuantityProductInBasket={props.dicrementQuantityProductInBasket}
                         getTotalPrice={props.getTotalPrice}
                         addToCart={props.addToCart}
+                        setOpenPopupAddGoods={props.setOpenPopupAddGoods}
                     />
                     <BasketOrderBlock
                         getTotalPrice={props.getTotalPrice}
@@ -51,6 +52,9 @@ function BasketPage(props) {
                     handleScrollLeft={props.handleScrollLeft}
                     contentRefBasketPage={props.contentRefBasketPage}
                     addToCart={props.addToCart}
+                    quantity={props.quantity}
+                    setOpenPopupAddGoods={props.setOpenPopupAddGoods}
+                    setTitleGoodsForPopup={props.setTitleGoodsForPopup}
                 />
             </div >
         </section >

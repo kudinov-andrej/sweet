@@ -4,8 +4,9 @@ import Header from './header/Header';
 import ImportantPage from './ImportantPage/ImportantPage';
 import Footer from "./Footer";
 import BasketPage from "./basketPage/BasketPage";
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Route, Routes } from "react-router-dom";
+import PopupAddGoods from './Popup/PopupAddGoods';
 
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
@@ -14,6 +15,8 @@ function App() {
   // устанавливаем скидку по промокоду 
   const [discountsValue, setDiscountsValue] = useState(0);
   const [discountsError, setDiscountsError] = useState("");
+  const [openPopupAddGoods, setOpenPopupAddGoods] = useState(false);
+  const [titleGoodsForPopup, setTitleGoodsForPopup] = useState("");
 
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
@@ -21,7 +24,7 @@ function App() {
   function hendleOpenButtonNews() {
     setOpenBlockNews(!openBlockNews)
   }
-
+  const navigate = useNavigate();
   // скролл в блоке Promotion
 
   const contentRef = useRef(null);
@@ -151,7 +154,39 @@ function App() {
 
   }
 
+  // закрытие попапов
 
+  function closePopupAddGoodsAndNavigate() {
+    setOpenPopupAddGoods(false);
+    navigate("/basket");
+  }
+
+  function closeAllPopups() {
+    setOpenPopupAddGoods(false);
+  }
+
+
+  function handlePopupCloseClick(evt) {
+    if (evt.target.classList.contains('popup')) {
+      closeAllPopups();
+    }
+  }
+
+  useEffect(() => {
+    if (openPopupAddGoods) {
+      function handleEsc(evt) {
+        if (evt.key === 'Escape') {
+          closeAllPopups()
+        }
+      }
+
+      document.addEventListener('keydown', handleEsc);
+
+      return () => {
+        document.removeEventListener('keydown', handleEsc);
+      }
+    }
+  }, [openPopupAddGoods]);
 
   return (
     <div className="App">
@@ -169,6 +204,8 @@ function App() {
             openBlockNews={openBlockNews}
             quantity={quantity}
             addToCart={addToCart}
+            setOpenPopupAddGoods={setOpenPopupAddGoods}
+            setTitleGoodsForPopup={setTitleGoodsForPopup}
           />}
         />
         <Route path="/basket"
@@ -188,10 +225,19 @@ function App() {
             contentRefBasketPage={contentRefBasketPage}
             handleScrollRight={handleScrollRight}
             handleScrollLeft={handleScrollLeft}
+            setOpenPopupAddGoods={setOpenPopupAddGoods}
+            setTitleGoodsForPopup={setTitleGoodsForPopup}
           />}
         />
       </Routes>
       <Footer />
+      <PopupAddGoods
+        openPopupAddGoods={openPopupAddGoods}
+        handlePopupCloseClick={handlePopupCloseClick}
+        closeAllPopups={closeAllPopups}
+        closePopupAddGoodsAndNavigate={closePopupAddGoodsAndNavigate}
+        titleGoodsForPopup={titleGoodsForPopup}
+      />
     </div >
   );
 }

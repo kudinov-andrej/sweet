@@ -14,7 +14,8 @@ function Product(props) {
             quantity: props.quantity,
 
         });
-
+        props.setOpenPopupAddGoods(true);
+        props.setTitleGoodsForPopup(props.title);
     }
 
 
