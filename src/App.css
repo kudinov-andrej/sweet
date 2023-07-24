@@ -2339,10 +2339,22 @@ header {
   transition: scale 0.3s ease;
 }
 
+.button__order-goods_disabled {
+  cursor: default;
+  background-color: #969696;
+}
+
 .button__order-goods:hover {
   cursor: pointer;
   scale: 1.05;
 }
+
+.button__order-goods_disabled:hover {
+  scale: 1;
+  cursor: default;
+}
+
+
 
 .basket__text-agreement {
   margin: 0;

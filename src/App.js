@@ -17,6 +17,7 @@ function App() {
   const [discountsError, setDiscountsError] = useState("");
   const [openPopupAddGoods, setOpenPopupAddGoods] = useState(false);
   const [titleGoodsForPopup, setTitleGoodsForPopup] = useState("");
+  const [dayError, setDayError] = useState(true);
 
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
@@ -227,6 +228,8 @@ function App() {
             handleScrollLeft={handleScrollLeft}
             setOpenPopupAddGoods={setOpenPopupAddGoods}
             setTitleGoodsForPopup={setTitleGoodsForPopup}
+            dayError={dayError}
+            setDayError={setDayError}
           />}
         />
       </Routes>

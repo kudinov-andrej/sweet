@@ -15,6 +15,13 @@ export function useFormWithValidation() {
         if (name === 'email') {
             const emailError = !isEmail(value) ? 'Неверный формат электронной почты' : '';
             setErrors({ ...errors, [name]: emailError });
+        } else if (name === 'time') {
+            if (value === "Выберите время получения") {
+                const timeError = 'Выберите время получения';
+                setErrors({ ...errors, [name]: timeError });
+            } else {
+                setErrors({ ...errors, [name]: "" });
+            }
         } else {
             setErrors({ ...errors, [name]: target.validationMessage });
         }
@@ -23,6 +30,7 @@ export function useFormWithValidation() {
         setValues({ ...values, [name]: value });
 
     };
+
 
     const resetForm = useCallback(
         (newValues = {}, newErrors = {}, newIsValid = false) => {
@@ -33,5 +41,5 @@ export function useFormWithValidation() {
         [setValues, setErrors, setIsValid]
     );
 
-    return { values, handleChange, errors, isValid, resetForm };
+    return { values, handleChange, errors, isValid, resetForm, setValues, setErrors, setIsValid };
 }

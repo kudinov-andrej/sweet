@@ -45,6 +45,8 @@ function BasketPage(props) {
                         expressDelivery={props.expressDelivery}
                         getTotalPrice={props.getTotalPrice}
                         discountsValue={props.discountsValue}
+                        dayError={props.dayError}
+                        setDayError={props.setDayError}
                     />
                 </div>
                 <BasketProduct

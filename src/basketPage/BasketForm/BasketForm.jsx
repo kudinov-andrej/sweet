@@ -6,11 +6,13 @@ import DeliveryImgFree from '../../image/delivery/картинкаРука.svg';
 import { useFormWithValidation } from '../../UseFormValidation/useFormValidation';
 
 
-function BasketForm(props) {
 
-    const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
+function BasketForm(props) {
+    const { values, handleChange, errors, isValid, setValues, setErrors, setIsValid } = useFormWithValidation();
 
     const currentDate = new Date();
+    const todayDay = currentDate.getDate();
+
     const dateMonthLater = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
     let dates = [];
     for (let date = currentDate; date <= dateMonthLater; date.setDate(date.getDate() + 1)) {
@@ -36,9 +38,11 @@ function BasketForm(props) {
         })
     }
 
+
+
     return (
 
-        <form className='basket__form-conteiner' onSubmit={handleBuySubmit}>
+        <form className='basket__form-conteiner' onSubmit={handleBuySubmit} noValidate>
             <div className='basket__input-box'>
                 <div className='basket__input-conteiner'>
                     <label htmlFor="basket__form-input_typy_name" className='basket__form-label'>Ваше имя*</label>
@@ -63,6 +67,7 @@ function BasketForm(props) {
                         name='tel'
                         value={values.tel}
                         onChange={handleChange}
+                        pattern='^(?:\+7|8)\d{10}$'
                     />
                     <span className='basket__form-error'>{errors.tel}</span>
                 </div>
@@ -111,18 +116,31 @@ function BasketForm(props) {
             <div className='basket__input-box'>
                 <div className='basket__input-conteiner'>
                     <label htmlFor="basket__form-input_typy_date" className='basket__form-label'>Дата получения</label>
-                    <DatePicker className='basket__form-input basket__form-input_typy_date' id="basket__form-input_typy_date" placeholder='Выберите дату'>
+                    <DatePicker
+                        className='basket__form-input basketform-input_typy_date'
+                        id="basket__form-input_typy_date"
+                        placeholder='Выберите дату'
+                        format="DD-MM-YYYY"
+                        onChange={(date, dateString) => {
+                            if (dateString >= todayDay.toString()) {
+                                setValues({ ...values, day: dateString });
+                                setErrors({ ...errors, day: "" });
+                                props.setDayError(false);
+                            } else {
+                                const dayError = 'Выберите корректную дату доставки';
+                                setErrors({ ...errors, day: dayError });
+                                props.setDayError(true);
+                            }
+                        }}
+                    >
                         <select defaultValue={currentDate}
                             {...(props.expressDelivery ? { required: true } : {})}
                             className='basket__form-input basket__form-input_typy_date'
-                            name='data'
-                            value={values.data}
-                            onChange={handleChange}
                         >
                             {dates.map(d => <Option key={d}>{d.toLocaleDateString()}</Option>)}
                         </select>
                     </DatePicker>
-                    <span className='basket__form-error'>{errors.data}</span>
+                    <span className='basket__form-error'>{errors.day}</span>
                 </div>
                 <div className='basket__input-conteiner'>
                     <label htmlFor="basket__form-input_typy_time" className='basket__form-label'>Время</label>
@@ -133,6 +151,7 @@ function BasketForm(props) {
                         value={values.time}
                         onChange={handleChange}
                     >
+                        <option className='basket__form-input_option'>Выберите время получения</option>
                         <option className='basket__form-input_option'>09:00-11:00</option>
                         <option className='basket__form-input_option'>11:00-13:00</option>
                         <option className='basket__form-input_option'>13:00-15:00</option>
@@ -200,7 +219,7 @@ function BasketForm(props) {
                     :
                     props.getTotalPrice() - props.discountsValue} руб.</p>
             </div>
-            <button type='submit' className='button__order-goods' disabled={!isValid} >Оформить заказ</button>
+            <button type='submit' className={!isValid || props.dayError ? 'button__order-goods button__order-goods_disabled' : 'button__order-goods'} disabled={!isValid || props.dayError} >Оформить заказ</button>
             <p className="basket__text-agreement">Нажимая на кнопку "Оформить заказ" Я принимаю и соглашаюсь с <a className='basket__link-agreement' href='#'>Договором оферты</a> и разрешаю обработку моих персональных данных в соответствии с <a className='basket__link-agreement' href='#'>Политикой конфиденциальности</a></p>
         </form>
 
