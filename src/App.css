@@ -1130,6 +1130,15 @@ header {
   border: 1px solid #EDEDF0;
 }
 
+.product__card-link {
+  text-decoration: none;
+  transition: scale 0.3s ease;
+}
+
+.product__card-link:hover {
+  scale: 1.01;
+}
+
 .product__img {
   margin: 0;
   padding: 0;

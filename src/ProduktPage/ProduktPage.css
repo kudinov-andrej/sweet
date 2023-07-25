@@ -1,0 +1,194 @@
+.produkt-page {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    background: var(--bg, #F7F7F7);
+    display: flex;
+    flex-direction: column;
+}
+
+.produkt-page__card {
+    margin: 0 auto;
+    margin-top: 31px;
+    padding: 0;
+    width: 78%;
+    display: flex;
+    flex-direction: row;
+}
+
+.produkt-page__card-gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 6.33fr 1fr;
+    max-width: 570px;
+    gap: 14px;
+    margin: 0 auto;
+}
+
+.card-gallery-img_typy_big {
+    grid-column: 1 / span 9;
+
+}
+
+.card-gallery-img {
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(9, 71px);
+    grid-template-rows: repeat(1, 71px);
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.produkt-page__card-information {
+    margin: 0;
+    margin-left: 30px;
+    width: 100%;
+    max-width: 570px;
+
+}
+
+.produkt-page__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 11px;
+    text-align: start;
+    max-width: 90%;
+    color: var(--292929, #292929);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.produkt-page__description {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    margin-bottom: 5px;
+    max-width: 90%;
+    color: var(--292929, #292929);
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.produkt-page__tastes-block {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-radius: 5px;
+    border: 1px solid #EDEDF0;
+    background: #FFF;
+    max-width: 100%;
+
+}
+
+.produkt-page__tastes-title {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    max-width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 27px;
+    color: var(--292929, #292929);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.produkt-page__tastes-item {
+    margin: 0;
+    padding: 0;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produkt-page__tastes-item:last-child {
+    margin-bottom: 24px;
+}
+
+.produkt-page__tastes-name {
+    margin: 0;
+    padding: 0;
+}
+
+.produkt-page__tastes-quantity {
+    margin: 0;
+    padding: 0;
+}
+
+.produkt-page__buy-block {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produkt-page__advertising-block {
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.produkt-page__advertising-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produkt-page__advertising-item-img {
+    width: 46px;
+    height: 46px;
+    margin-right: 27px;
+
+}
+
+.produkt-page__advertising-item-text {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 486px;
+    text-align: start;
+}
+
+.produkt-page__buy-block {
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #EDEDF0;
+    background: #FFF;
+}
+
+.produkt-page__buy-button {
+    width: 178px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background: var(--unnamed, #E7426A);
+}

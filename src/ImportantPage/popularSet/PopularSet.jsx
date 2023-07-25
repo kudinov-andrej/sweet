@@ -4,7 +4,6 @@ import Product from '../product/Product'
 import { productsPopular } from '../../constants/product/productConst.js'
 import PopupAddGoods from '../../Popup/PopupAddGoods';
 
-
 function PopularSet(props) {
 
 
@@ -38,7 +37,7 @@ function PopularSet(props) {
                 <button onClick={hendleOpenClick} type="button"
                     className='button'>{props.openBlockSet ? "Скрыть наборы" : "Показать все наборы"}
                 </button>
-            </section>
+            </section >
             <PopupAddGoods />
         </>
     );

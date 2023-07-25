@@ -7,6 +7,7 @@ import BasketPage from "./basketPage/BasketPage";
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Route, Routes } from "react-router-dom";
 import PopupAddGoods from './Popup/PopupAddGoods';
+import ProduktPage from './ProduktPage/ProduktPage'
 
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
@@ -232,6 +233,12 @@ function App() {
             setDayError={setDayError}
           />}
         />
+        <Route path="/popular-sets/:vendorCode" element={<ProduktPage
+          setOpenPopupAddGoods={setOpenPopupAddGoods}
+          setTitleGoodsForPopup={setTitleGoodsForPopup}
+          addToCart={addToCart}
+          quantity={quantity}
+        />} />
       </Routes>
       <Footer />
       <PopupAddGoods
