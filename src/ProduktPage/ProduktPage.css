@@ -19,7 +19,7 @@
 .produkt-page__card-gallery {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 6.33fr 1fr;
+    grid-template-rows: auto minmax(1px, 1fr);
     max-width: 570px;
     gap: 14px;
     margin: 0 auto;
@@ -27,7 +27,6 @@
 
 .card-gallery-img_typy_big {
     grid-column: 1 / span 9;
-
 }
 
 .card-gallery-img {
