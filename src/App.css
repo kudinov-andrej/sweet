@@ -2430,6 +2430,7 @@ header {
   top: 85px;
   cursor: pointer;
   transition: scale 0.3s ease;
+  z-index: 5;
 }
 
 .product-conteiner__button:hover {
