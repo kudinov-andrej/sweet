@@ -4,9 +4,12 @@ import { useParams } from 'react-router-dom';
 import { productsPopular } from '../constants/product/productConst.js';
 import BuyButton from '../ImportantPage/product/BuyButton';
 import { delivery, pickup, present } from '../constants/produktPage/produktPage';
+import BasketProduct from '../basketPage/BasketProduct/BasketProduct';
+import ProduktPageNavigation from './ProduktPageNavigation/ProduktPageNavigation';
 
-function ProduktPage({ aboutProduktInformation, setAboutProduktInformation }, ...props) {
+function ProduktPage(props) {
 
+    const { aboutProduktInformation, setAboutProduktInformation } = props;
     const { vendorCode } = useParams();
 
     const product = productsPopular.find((p) => p.vendorCode === vendorCode);
@@ -28,6 +31,9 @@ function ProduktPage({ aboutProduktInformation, setAboutProduktInformation }, ..
 
     return (
         <section className="produkt-page">
+            <ProduktPageNavigation
+                vendorCode={product.vendorCode}
+            />
             <div className='produkt-page__card'>
                 <div className='produkt-page__card-gallery'>
                     <img className='card-gallery-img card-gallery-img_typy_big' src={product.srcProduct} alt={product.title}></img>
@@ -130,6 +136,18 @@ function ProduktPage({ aboutProduktInformation, setAboutProduktInformation }, ..
                         <p className="about-product__description-text">{product.storageCondition}</p>
                     </div>
                 </div>
+            </div>
+            <div className='produkt-page__add-produkt'>
+                <BasketProduct
+                    handleScrollRight={props.handleScrollRight}
+                    handleScrollLeft={props.handleScrollLeft}
+                    contentRefBasketPage={props.contentRefBasketPage}
+                    addToCart={props.addToCart}
+                    quantity={props.quantity}
+                    setOpenPopupAddGoods={props.setOpenPopupAddGoods}
+                    setTitleGoodsForPopup={props.setTitleGoodsForPopup}
+                    titleBlock={props.titleBlock}
+                />
             </div>
         </section >
     );

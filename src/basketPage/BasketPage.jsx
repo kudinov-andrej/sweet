@@ -57,6 +57,7 @@ function BasketPage(props) {
                     quantity={props.quantity}
                     setOpenPopupAddGoods={props.setOpenPopupAddGoods}
                     setTitleGoodsForPopup={props.setTitleGoodsForPopup}
+                    titleBlock={props.titleBlock}
                 />
             </div >
         </section >

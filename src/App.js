@@ -19,7 +19,10 @@ function App() {
   const [openPopupAddGoods, setOpenPopupAddGoods] = useState(false);
   const [titleGoodsForPopup, setTitleGoodsForPopup] = useState("");
   const [dayError, setDayError] = useState(true);
+
+  // стейт для отображения информации о товаре на странице карточки товара
   const [aboutProduktInformation, setAboutProduktInformation] = useState("description");
+
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
   }
@@ -231,6 +234,7 @@ function App() {
             setTitleGoodsForPopup={setTitleGoodsForPopup}
             dayError={dayError}
             setDayError={setDayError}
+            titleBlock="Добавить в заказ"
           />}
         />
         <Route path="/popular-sets/:vendorCode" element={<ProduktPage
@@ -240,6 +244,10 @@ function App() {
           quantity={quantity}
           aboutProduktInformation={aboutProduktInformation}
           setAboutProduktInformation={setAboutProduktInformation}
+          handleScrollRight={handleScrollRight}
+          handleScrollLeft={handleScrollLeft}
+          contentRefBasketPage={contentRefBasketPage}
+          titleBlock="Вам может понравиться"
         />} />
       </Routes>
       <Footer />

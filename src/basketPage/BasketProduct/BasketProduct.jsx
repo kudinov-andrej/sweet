@@ -16,7 +16,7 @@ function BasketProduct(props) {
     return (
 
         <section className="basket__product">
-            <h2 className='basket__product-title'>Добавить в заказ</h2>
+            <h2 className='basket__product-title'>{props.titleBlock}</h2>
             <div className='basket__product-conteiner'>
                 <button className='product-conteiner__button product-conteiner__button_type_left'
                     onClick={handleScrollLeftButtonClick}

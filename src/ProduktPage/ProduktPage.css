@@ -241,11 +241,6 @@
     transition: scale 0.5s ease;
 }
 
-.produkt-page__navigation-punkt:hover {
-    cursor: pointer;
-    scale: 1.01;
-}
-
 .produkt-page__navigation-punkt-button {
     margin: 0;
     padding: 0;
@@ -254,6 +249,7 @@
     height: 57px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .produkt-page__navigation-punkt-button-active {
@@ -266,7 +262,6 @@
     margin-left: 23px;
     display: flex;
     flex-direction: column;
-
     justify-content: flex-start;
     text-align: start;
     color: var(--292929, #292929);
@@ -289,4 +284,42 @@
     margin-bottom: 57px;
     display: flex;
     text-align: start;
+}
+
+.produkt-page__add-produkt {
+    margin: 0 auto;
+    padding: 0;
+    width: 81.16%;
+}
+
+.produkt__navigation {
+    margin: 0;
+    padding: 0;
+    margin-top: 34px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    align-self: center;
+}
+
+.produkt__navigation-punct {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(41, 41, 41, 0.46);
+}
+
+.produkt__navigation-punct_active {
+    color: #4E9DD3;
+}
+
+.produkt__navigation-punct:hover {
+    scale: 1.05;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import BuyButton from '../../ImportantPage/product/BuyButton'
+import { Link } from 'react-router-dom';
 
 function ProductForBasket(props) {
 
@@ -21,9 +22,11 @@ function ProductForBasket(props) {
 
     return (
         <div className='product__card-basket'>
-            <img className='product__img-basket' src={props.srcProduct} alt={props.altProduct} />
-            <h2 className='product__title-basket'>{props.title}</h2>
-            <p className='product__description-basket'>{props.description}</p>
+            <Link className='product__card-link' key={props.vendorCode} to={`/popular-sets/${props.vendorCode}`}>
+                <img className='product__img' src={props.srcProduct} alt={props.altProduct} />
+                <h2 className='product__title'>{props.title}</h2>
+                <p className='product__description'>{props.description}</p>
+            </Link>
             <div className='product__buy-block-basket'>
                 <p className='product__price-basket'>{props.productPrice} руб</p>
                 <BuyButton onClick={() => {
