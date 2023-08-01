@@ -192,3 +192,101 @@
     border-radius: 3px;
     background: var(--unnamed, #E7426A);
 }
+
+.produkt-page__information {
+    margin: 0 auto;
+    padding: 0;
+    width: 81.16%;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    border: 1px solid #EDEDF0;
+    background: #FFF;
+}
+
+.produkt-page__navigation {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #EDEDF0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.produkt-page__navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 23px;
+    gap: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.produkt-page__navigation-punkt {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: var(--292929, #292929);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 192px;
+    transition: scale 0.5s ease;
+}
+
+.produkt-page__navigation-punkt:hover {
+    cursor: pointer;
+    scale: 1.01;
+}
+
+.produkt-page__navigation-punkt-button {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    max-width: 192px;
+    height: 57px;
+    background-color: transparent;
+    border: none;
+}
+
+.produkt-page__navigation-punkt-button-active {
+    border-bottom: solid 4px #E7426A;
+}
+
+.produkt-page__about-product {
+    margin: 0;
+    padding: 0;
+    margin-left: 23px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    text-align: start;
+    color: var(--292929, #292929);
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    max-width: 100%;
+}
+
+.about-product__description {
+    display: none;
+}
+
+.about-product__description-active {
+    margin: 0;
+    padding: 0;
+    margin-top: 41px;
+    margin-bottom: 57px;
+    display: flex;
+    text-align: start;
+}

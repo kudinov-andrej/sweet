@@ -1,14 +1,11 @@
 import './ProduktPage.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-//import Product from '../product/Product';
 import { productsPopular } from '../constants/product/productConst.js';
 import BuyButton from '../ImportantPage/product/BuyButton';
 import { delivery, pickup, present } from '../constants/produktPage/produktPage';
 
-function ProduktPage(props) {
-
-
+function ProduktPage({ aboutProduktInformation, setAboutProduktInformation }, ...props) {
 
     const { vendorCode } = useParams();
 
@@ -28,7 +25,6 @@ function ProduktPage(props) {
         props.setOpenPopupAddGoods(true);
         props.setTitleGoodsForPopup(product.title);
     }
-
 
     return (
         <section className="produkt-page">
@@ -70,6 +66,68 @@ function ProduktPage(props) {
                             <img className='produkt-page__advertising-item-img' src={present} alt='Изображение доставки'></img>
                             <p className='produkt-page__advertising-item-text'>Можем преподнести как анонимный подарок:)</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="produkt-page__information">
+                <nav className="produkt-page__navigation">
+                    <ul className='produkt-page__navigation-list'>
+                        <li className="produkt-page__navigation-punkt">
+                            <button className={aboutProduktInformation === "description"
+                                ?
+                                "produkt-page__navigation-punkt-button produkt-page__navigation-punkt-button-active"
+                                :
+                                "produkt-page__navigation-punkt-button"}
+                                onClick={() => setAboutProduktInformation("description")}
+                            >
+                                Описание
+                            </button>
+                        </li>
+                        <li className="produkt-page__navigation-punkt">
+                            <button className={aboutProduktInformation === "compound"
+                                ?
+                                "produkt-page__navigation-punkt-button produkt-page__navigation-punkt-button-active"
+                                :
+                                "produkt-page__navigation-punkt-button"}
+                                onClick={() => setAboutProduktInformation("compound")}
+                            >
+                                Состав и пищевая ценность
+                            </button>
+                        </li>
+                        <li className="produkt-page__navigation-punkt">
+                            <button className={aboutProduktInformation === "storageCondition"
+                                ?
+                                "produkt-page__navigation-punkt-button produkt-page__navigation-punkt-button-active"
+                                :
+                                "produkt-page__navigation-punkt-button"}
+                                onClick={() => setAboutProduktInformation("storageCondition")}
+                            >
+                                Условия и сроки хранения
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                <div className="produkt-page__about-product">
+                    <div className={aboutProduktInformation === "description"
+                        ?
+                        "about-product__description-active"
+                        :
+                        "about-product__description"}>
+                        <p className="about-product__description-text">{product.detailedDescription}</p>
+                    </div>
+                    <div className={aboutProduktInformation === "compound"
+                        ?
+                        "about-product__description-active"
+                        :
+                        "about-product__description"}>
+                        <p className="about-product__description-text">{product.compound}</p>
+                    </div>
+                    <div className={aboutProduktInformation === "storageCondition"
+                        ?
+                        "about-product__description-active"
+                        :
+                        "about-product__description"}>
+                        <p className="about-product__description-text">{product.storageCondition}</p>
                     </div>
                 </div>
             </div>

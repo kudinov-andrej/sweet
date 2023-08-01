@@ -19,7 +19,7 @@ function App() {
   const [openPopupAddGoods, setOpenPopupAddGoods] = useState(false);
   const [titleGoodsForPopup, setTitleGoodsForPopup] = useState("");
   const [dayError, setDayError] = useState(true);
-
+  const [aboutProduktInformation, setAboutProduktInformation] = useState("description");
   function hendleOpenButton() {
     setOpenBlockSet(!openBlockSet)
   }
@@ -238,6 +238,8 @@ function App() {
           setTitleGoodsForPopup={setTitleGoodsForPopup}
           addToCart={addToCart}
           quantity={quantity}
+          aboutProduktInformation={aboutProduktInformation}
+          setAboutProduktInformation={setAboutProduktInformation}
         />} />
       </Routes>
       <Footer />
