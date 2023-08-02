@@ -132,6 +132,14 @@ header {
   margin-right: 14px;
   max-width: 123px;
   word-wrap: break-word;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.header__navigation-link-active {
+  text-decoration: none;
+  color: #4E9DD3;
 }
 
 .header__location-block {

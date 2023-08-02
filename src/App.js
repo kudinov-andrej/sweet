@@ -7,8 +7,8 @@ import BasketPage from "./basketPage/BasketPage";
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Route, Routes } from "react-router-dom";
 import PopupAddGoods from './Popup/PopupAddGoods';
-import ProduktPage from './ProduktPage/ProduktPage'
-
+import ProduktPage from './ProduktPage/ProduktPage';
+import GuaranteesPage from './GuaranteesPage/GuaranteesPage';
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
   const [openBlockSet, setOpenBlockSet] = useState(false);
@@ -249,6 +249,9 @@ function App() {
           contentRefBasketPage={contentRefBasketPage}
           titleBlock="Вам может понравиться"
         />} />
+        <Route path="/guarantees" element={<GuaranteesPage />}
+
+        />
       </Routes>
       <Footer />
       <PopupAddGoods

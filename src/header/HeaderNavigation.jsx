@@ -8,7 +8,7 @@ function HeaderNavigation(props) {
     return (
         <nav className='header__navigation'>
             <ul className='header__navigation-block'>
-                <li className='header__navigation-link'>Гарантия свежести</li>
+                <NavLink to="/guarantees" className={({ isActive }) => `header__navigation-link ${isActive ? 'header__navigation-link-active' : ''}`}>Гарантия свежести</NavLink>
                 <li className='header__navigation-link'>Доставка и оплата</li>
                 <li className='header__navigation-link'>Оптовые поставки</li>
                 <li className='header__navigation-link'>Контакты</li>
