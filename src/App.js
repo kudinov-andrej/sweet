@@ -9,6 +9,9 @@ import { Route, Routes } from "react-router-dom";
 import PopupAddGoods from './Popup/PopupAddGoods';
 import ProduktPage from './ProduktPage/ProduktPage';
 import GuaranteesPage from './GuaranteesPage/GuaranteesPage';
+import DeliveryAndPayPege from './DeliveryAndPayPege/DeliveryAndPayPege';
+
+
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
   const [openBlockSet, setOpenBlockSet] = useState(false);
@@ -249,8 +252,11 @@ function App() {
           contentRefBasketPage={contentRefBasketPage}
           titleBlock="Вам может понравиться"
         />} />
-        <Route path="/guarantees" element={<GuaranteesPage />}
-
+        <Route path="/guarantees"
+          element={<GuaranteesPage />}
+        />
+        <Route path="/delivery-and-pay"
+          element={<DeliveryAndPayPege />}
         />
       </Routes>
       <Footer />

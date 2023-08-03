@@ -10,8 +10,19 @@ import { useFormWithValidation } from '../../UseFormValidation/useFormValidation
 function BasketForm(props) {
     const { values, handleChange, errors, isValid, setValues, setErrors, setIsValid } = useFormWithValidation();
 
-    const currentDate = new Date();
-    const todayDay = currentDate.getDate();
+    let currentDate = new Date();
+
+    // Получаем день, месяц и год из объекта Date
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear();
+
+    // Добавляем ведущий 0, если день или месяц состоят из одной цифры
+    day = day < 10 ? '0' + day : day;
+    month = month < 10 ? '0' + month : month;
+
+    // Формируем дату в формате DD-MM-YYYY
+    let todayDay = day + "-" + month + "-" + year;
 
     const dateMonthLater = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
     let dates = [];
@@ -37,8 +48,6 @@ function BasketForm(props) {
             "пользовательский ввод": values,
         })
     }
-
-
 
     return (
 
