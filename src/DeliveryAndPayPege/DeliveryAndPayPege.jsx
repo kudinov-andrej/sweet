@@ -36,9 +36,9 @@ function DeliveryAndPayPege() {
                     <img className="self-call-img-conteiner-img self-call-img_type_right-piece" src={macaronPiece} alt="кусочек макаронс"></img>
                 </div>
             </div>
-            <img className="delivery-page__map" src={map} alt="карта доставки"></img>
-        </section>                           
-    )         
-}         
-         
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2907b2b0469bc181ab3e2561a8f222262b41d8467f5aa322006d9917df9a48c&amp;source=constructor" width="100%" height="387" frameborder="0"></iframe>
+        </section>
+    )
+}
+
 export default DeliveryAndPayPege;
