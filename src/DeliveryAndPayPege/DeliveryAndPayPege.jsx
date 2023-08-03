@@ -1,7 +1,10 @@
 import React from "react";
 import './DeliveryAndPayPege.css';
 import DeliveryPageNavigation from './DeliveryPageNavigation/DeliveryPageNavigation';
-import { frame, leftWheel, rightWhel, trank, wing, macaronPiece, vector, macaron, map } from '../../src/constants/deliveryAndPayPege/deliveryAndPayPege';
+import {
+    frame, leftWheel, rightWhel, trank,
+    wing, macaronPiece, vector, macaron, map
+} from '../../src/constants/deliveryAndPayPege/deliveryAndPayPege';
 function DeliveryAndPayPege() {
 
 
@@ -26,7 +29,7 @@ function DeliveryAndPayPege() {
             <div className="delivery-page__self-call">
                 <div className="self-call-text-conteiner">
                     <h2 className="self-call-text-conteiner__title">Самовывоз</h2>
-                    <p className="self-call-text-conteiner__text">Вы можете сделать заказ и забрать его самостоятельно с нашего производства по адресу: ул. Маршала Тухачевского 22 БЦ "Сова" Заказ необходимо сделать до 20 часов, чтобы забрать его на следующий день в пункте самовывоза в любое удобное время в промежутке с 13 до 22 часов. Оплатить заказ банковской картой можно заранее при оформлении. Непосредственно при получении банковской картой расплатиться нельзя.</p>
+                    <p className="self-call-text-conteiner__text">Вы можете сделать заказ и забрать его самостоятельно с нашего производства по адресу: Москва, Красная площадь, 1 Заказ необходимо сделать до 20 часов, чтобы забрать его на следующий день в пункте самовывоза в любое удобное время в промежутке с 13 до 22 часов. Оплатить заказ банковской картой можно заранее при оформлении. Непосредственно при получении банковской картой расплатиться нельзя.</p>
                     <h3 className="self-call-text-conteiner__subtitle">Оплата</h3>
                     <p className="self-call-text-conteiner__text">Вы можете оплатить заказ при получении наличными или заранее оплатить заказ банковской картой. Для этого укажите выбранный способ при оформлении заказа. Оплата банковской картой удобна, если вы хотите отправить десерты в подарок или не желаете возиться с наличными при получении заказа. Если у Вас нет карты российского банка, мы можем принять оплату через платёжную систему PayPal.</p>
                 </div>
