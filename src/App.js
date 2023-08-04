@@ -11,8 +11,11 @@ import ProduktPage from './ProduktPage/ProduktPage';
 import GuaranteesPage from './GuaranteesPage/GuaranteesPage';
 import DeliveryAndPayPege from './DeliveryAndPayPege/DeliveryAndPayPege';
 import ContactsPage from './contactsPage/ContactsPage';
+import WholesaleSupplyPage from './WholesaleSupplyPage/WholesaleSupplyPage';
 
 function App() {
+  // авторизация пользователя
+  const [isLogin, setIsLogin] = useState(false);
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
   const [openBlockSet, setOpenBlockSet] = useState(false);
   const [openBlockNews, setOpenBlockNews] = useState(false);
@@ -260,6 +263,11 @@ function App() {
         />
         <Route path="/contacts"
           element={<ContactsPage />}
+        />
+        <Route path="/wholesale-supply"
+          element={<WholesaleSupplyPage
+            isLogin={isLogin}
+          />}
         />
       </Routes>
       <Footer />

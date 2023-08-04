@@ -1,0 +1,233 @@
+.wholesale {
+    margin: 0 auto;
+    padding: 0;
+    background: var(--bg, #F7F7F7);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wholesale__navigation {
+    margin: 0;
+    padding: 0;
+    margin-top: 34px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    align-self: center;
+}
+
+.wholesale__navigation-punct {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(41, 41, 41, 0.46);
+}
+
+.wholesale__navigation-punct_active {
+    color: #4E9DD3;
+}
+
+.wholesale__navigation-punct:hover {
+    scale: 1.05;
+}
+
+.wholesale__promoting {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 67px;
+    display: grid;
+    width: 82.22%;
+    grid-template-columns: 1fr 1.42fr;
+    gap: 38px;
+}
+
+.promoting__img {
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-width: 469px;
+}
+
+.promoting-information {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.promoting-information__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 13px;
+    color: var(--292929, #292929);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 90%;
+}
+
+.promoting-information__text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+    color: var(--292929, #292929);
+    text-align: center;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 80%;
+}
+
+.promoting-information__button-conteiner {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 41px;
+    width: 70%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.promoting-information__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.promoting-information__button {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    max-width: 230px;
+    height: 50px;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid var(--4-e-9-dd-3, #4E9DD3);
+    transition: scale 0.3s ease;
+}
+
+.promoting-information__button:hover {
+    cursor: pointer;
+    scale: 1.03;
+}
+
+.promoting-information__list-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    max-width: 200px;
+    align-self: flex-start;
+}
+
+.promoting-information__list {
+    margin: 0;
+    padding: 0;
+    max-width: 95%;
+    color: var(--292929, #292929);
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.promoting-information__punct {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    list-style-type: circle;
+    margin-bottom: 10px;
+}
+
+.wholesale__offers {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.offers__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 51px;
+    max-width: 689px;
+    color: var(--292929, #292929);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.offers__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 113px;
+    display: grid;
+    width: 82.22%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 54px;
+    column-gap: 32px;
+
+}
+
+.offers__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.offers__item-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 13px;
+}
+
+.offers__item-text {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    color: var(--292929, #292929);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -1,0 +1,12 @@
+import macarons from '../../image/wholesalePage/macarons.png';
+import basket from '../../image/wholesalePage/basket.svg';
+import cafe from '../../image/wholesalePage/cafe.svg';
+import coffe from '../../image/wholesalePage/coffe.svg';
+import hotel from '../../image/wholesalePage/hotel.svg';
+import kendy from '../../image/wholesalePage/kendy.svg';
+import present from '../../image/wholesalePage/present.svg';
+import retail from '../../image/wholesalePage/retail.svg';
+import ball from '../../image/wholesalePage/ball.svg';
+import list from './list.txt';
+import presentation from './presentation.txt';
+export { macarons, list, presentation, basket, cafe, coffe, hotel, kendy, present, retail, ball };
