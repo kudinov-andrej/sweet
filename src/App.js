@@ -10,7 +10,7 @@ import PopupAddGoods from './Popup/PopupAddGoods';
 import ProduktPage from './ProduktPage/ProduktPage';
 import GuaranteesPage from './GuaranteesPage/GuaranteesPage';
 import DeliveryAndPayPege from './DeliveryAndPayPege/DeliveryAndPayPege';
-
+import ContactsPage from './contactsPage/ContactsPage';
 
 function App() {
   // раскрытие полного списка товаров и новостей в блоках PopularSet и News
@@ -257,6 +257,9 @@ function App() {
         />
         <Route path="/delivery-and-pay"
           element={<DeliveryAndPayPege />}
+        />
+        <Route path="/contacts"
+          element={<ContactsPage />}
         />
       </Routes>
       <Footer />

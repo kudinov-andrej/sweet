@@ -1,0 +1,142 @@
+.contacts-page__navigation {
+    margin: 0;
+    padding: 0;
+    margin-top: 34px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    align-self: center;
+}
+
+.contacts-page__navigation-punct {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(41, 41, 41, 0.46);
+}
+
+.contacts-page__navigation-punct_active {
+    color: #4E9DD3;
+}
+
+.contacts-page__navigation-punct:hover {
+    scale: 1.05;
+}
+
+
+.contacts-page {
+    margin: 0 auto;
+    padding: 0;
+    background: var(--bg, #F7F7F7);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts {
+    margin: 0 auto;
+    display: grid;
+    margin-bottom: 82px;
+    gap: 68px;
+    grid-template-columns: 1fr 1fr;
+    width: 70.625%;
+}
+
+.contacts-img__conteiner {
+    margin: 0;
+    padding: 0;
+    margin-top: 48px;
+    width: 100%;
+    max-width: 235px;
+    height: 278px;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+}
+
+.contacts-img {
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-img_type_location {
+    position: absolute;
+    width: 100%;
+    max-width: 235px;
+    top: -21%;
+    left: 0;
+}
+
+.contacts-img_type_macaron {
+    position: absolute;
+    width: 100%;
+    max-width: 235px;
+    top: -14%;
+    left: -22px;
+
+}
+
+.contacts-text__conteiner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contacts-text__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 17px;
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: start;
+    color: var(--292929, #292929);
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.contacts-text__text {
+    margin: 0;
+    padding: 0;
+    max-width: 95%;
+    word-wrap: break-word;
+    color: var(--292929, #292929);
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 16px;
+    text-align: start;
+}
+
+.contacts-text__subtitle {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    text-align: start;
+    max-width: 95%;
+    word-wrap: break-word;
+    color: var(--292929, #292929);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

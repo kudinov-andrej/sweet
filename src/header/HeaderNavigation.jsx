@@ -11,7 +11,7 @@ function HeaderNavigation(props) {
                 <NavLink to="/guarantees" className={({ isActive }) => `header__navigation-link ${isActive ? 'header__navigation-link-active' : ''}`}>Гарантия свежести</NavLink>
                 <NavLink to="/delivery-and-pay" className={({ isActive }) => `header__navigation-link ${isActive ? 'header__navigation-link-active' : ''}`}>Доставка и оплата</NavLink>
                 <li className='header__navigation-link'>Оптовые поставки</li>
-                <li className='header__navigation-link'>Контакты</li>
+                <NavLink to="/contacts" className={({ isActive }) => `header__navigation-link ${isActive ? 'header__navigation-link-active' : ''}`}>Контакты</NavLink>
             </ul>
             <div className='header__location-block'>
                 <div className='header__location-img'></div>
