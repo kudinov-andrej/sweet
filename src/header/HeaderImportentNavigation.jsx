@@ -1,6 +1,6 @@
 import '../App.css';
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 
 function HeaderImportentNavigation() {
     return (
@@ -10,7 +10,7 @@ function HeaderImportentNavigation() {
                 <li className='header__importent-navigation-link'>подарочные наборы</li>
                 <li className='header__importent-navigation-link'>Собрать набор</li>
             </ul>
-            <div className='header__logo'></div>
+            <NavLink to="/" className="header__logo-link"><div className='header__logo'></div></NavLink>
             <ul className='header__importent-navigation-block'>
                 <li className='header__importent-navigation-link'>Создать дизайн</li>
                 <li className='header__importent-navigation-link'>КОМПАНИЯМ</li>

@@ -341,7 +341,18 @@ header {
   height: 124px;
   margin-top: 18px;
   margin-bottom: 17px;
+  cursor: pointer;
+  transition: scale ease 0.5s;
+}
 
+.header__logo:hover {
+  scale: 1.01;
+}
+
+.header__logo-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 .page {
