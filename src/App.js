@@ -13,6 +13,7 @@ import DeliveryAndPayPege from './DeliveryAndPayPege/DeliveryAndPayPege';
 import ContactsPage from './contactsPage/ContactsPage';
 import WholesaleSupplyPage from './WholesaleSupplyPage/WholesaleSupplyPage';
 import WeddingPage from './weddingPage/WeddingPage';
+import AllSets from './allSets/AllSets';
 
 function App() {
   // авторизация пользователя
@@ -26,7 +27,10 @@ function App() {
   const [openPopupAddGoods, setOpenPopupAddGoods] = useState(false);
   const [titleGoodsForPopup, setTitleGoodsForPopup] = useState("");
   const [dayError, setDayError] = useState(true);
-
+  //устанавливаем тип товара для страницы с готовыми наборами
+  const [isType, setIsType] = useState("");
+  //устанавливаем активное состоянние кнопки
+  const [isActiveButton, setIsActiveButton] = useState(false);
   // стейт для отображения информации о товаре на странице карточки товара
   const [aboutProduktInformation, setAboutProduktInformation] = useState("description");
 
@@ -228,6 +232,20 @@ function App() {
             addToCart={addToCart}
             setOpenPopupAddGoods={setOpenPopupAddGoods}
             setTitleGoodsForPopup={setTitleGoodsForPopup}
+          />}
+        />
+        <Route exact path="/all-sets"
+          element={<AllSets
+            hendleOpenButton={hendleOpenButton}
+            openBlockSet={openBlockSet}
+            quantity={quantity}
+            addToCart={addToCart}
+            setOpenPopupAddGoods={setOpenPopupAddGoods}
+            setTitleGoodsForPopup={setTitleGoodsForPopup}
+            isType={isType}
+            setIsType={setIsType}
+            isActiveButton={isActiveButton}
+            setIsActiveButton={setIsActiveButton}
           />}
         />
         <Route path="/basket"

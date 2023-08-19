@@ -11,12 +11,14 @@ function PopularSet(props) {
         props.hendleOpenButton()
     }
 
+    const filteredProducts = props.type !== "" ? productsPopular.filter(item => item.type === props.type) : productsPopular;
+
     return (
         <>
             <section className="popular-sets">
                 <h2 className="popular-sets__title">{props.title}</h2>
                 <div className={props.openBlockSet ? "popular-sets__block popular-sets__block-open" : "popular-sets__block"}>
-                    {productsPopular.filter(item => item.type === props.type).map((card, vendorCode) =>
+                    {filteredProducts.map((card, vendorCode) =>
                         < Product
                             key={vendorCode}
                             vendorCode={card.vendorCode}

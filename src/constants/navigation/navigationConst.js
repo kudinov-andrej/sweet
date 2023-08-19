@@ -3,7 +3,7 @@ const navigationConst = [
         id: 1,
         type: 'one',
         typeImg: 'one',
-        link: '#',
+        link: '/all-sets',
         title: 'Готовые наборы',
         text: 'Готовые наборы со скидкой. Вы можете подобрать набор на подходящий случай.'
     },
