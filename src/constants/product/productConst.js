@@ -5,10 +5,17 @@ import bigSet from '../../image/popular-sets/BigSet.png';
 import setTo9 from '../../image/popular-sets/setTo9.png';
 import setTo16 from '../../image/popular-sets/SetTo16.png';
 
+import bigPiramida from '../../image/popular-sets/bigPiramida.png';
+import piramida from '../../image/popular-sets/piramida.png';
+import forGuests from '../../image/popular-sets/forGuests.png';
+import henParty from '../../image/popular-sets/hen-party.png';
+import name from '../../image/popular-sets/name.png';
+
 
 const productsPopular = [
     {
         vendorCode: '1',
+        type: 'popular',
         srcProduct: hard,
         altProduct: 'Изображение сердца',
         title: 'Сердце',
@@ -29,6 +36,7 @@ const productsPopular = [
     },
     {
         vendorCode: '2',
+        type: 'popular',
         srcProduct: aroundSet,
         altProduct: 'Изображение круглого набора',
         title: 'Круглый набор',
@@ -49,6 +57,7 @@ const productsPopular = [
     },
     {
         vendorCode: '3',
+        type: 'popular',
         srcProduct: beauty,
         altProduct: 'Изображение макаронс',
         title: 'Красота спасёт мир',
@@ -69,6 +78,7 @@ const productsPopular = [
     },
     {
         vendorCode: '4',
+        type: 'popular',
         srcProduct: setTo9,
         altProduct: 'Изображение набора макаронс из 9шт',
         title: 'Набор на 9',
@@ -89,6 +99,7 @@ const productsPopular = [
     },
     {
         vendorCode: "5",
+        type: 'popular',
         srcProduct: setTo16,
         altProduct: "Изображение набора макаронс из 16шт",
         title: "Набор на 16",
@@ -110,6 +121,7 @@ const productsPopular = [
     },
     {
         vendorCode: "6",
+        type: 'popular',
         srcProduct: bigSet,
         altProduct: "Изображение большого набора макаронс",
         title: "Круглый набор",
@@ -130,6 +142,7 @@ const productsPopular = [
     },
     {
         vendorCode: '7',
+        type: 'popular',
         srcProduct: setTo9,
         altProduct: 'Изображение набора макаронс из 9шт',
         title: 'Набор на 9',
@@ -150,6 +163,7 @@ const productsPopular = [
     },
     {
         vendorCode: '8',
+        type: 'popular',
         srcProduct: beauty,
         altProduct: 'Изображение макаронс',
         title: 'Красота спасёт мир',
@@ -170,6 +184,118 @@ const productsPopular = [
     },
     {
         vendorCode: '9',
+        srcProduct: bigPiramida,
+        type: 'wedding',
+        altProduct: 'Изображение большой пирамиды макарунс',
+        title: 'Большая пирамида',
+        description: 'Импозантная пирамида из 120 макарунс на ваше великолепное мероприятие',
+        productPrice: 9000,
+        delivery: true,
+        pickup: true,
+        present: false,
+        detailedDescription: 'Импозантная пирамида из 120 макарунс на ваше великолепное мероприятие',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 30,
+            strawberry: 30,
+            vanilla: 30,
+            pistachio: 30,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '10',
+        srcProduct: piramida,
+        type: 'wedding',
+        altProduct: 'Изображение пирамиды макарунс',
+        title: 'Пирамида макарунс',
+        description: 'Красочная пирамида из 60 макарунс с разнообразными вкусами',
+        productPrice: 5000,
+        delivery: true,
+        pickup: true,
+        present: true,
+        detailedDescription: 'Красочная пирамида из 60 макарунс с разнообразными вкусами',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 20,
+            raspberry: 15,
+            lemon: 10,
+            coconut: 15,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '11',
+        srcProduct: forGuests,
+        type: 'wedding',
+        altProduct: 'Изображение макарунс для гостей',
+        title: 'Макаруны для гостей',
+        description: 'Индивидуальные наборы макарунс для каждого гостя на вашем торжестве',
+        productPrice: 1300,
+        delivery: true,
+        pickup: true,
+        present: true,
+        detailedDescription: 'Индивидуальные наборы макарунс для каждого гостя на вашем торжестве',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 12,
+            vanilla: 12,
+            strawberry: 12,
+            pistachio: 12,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '12',
+        srcProduct: henParty,
+        type: 'wedding',
+        altProduct: 'Изображение макарунс для девичника',
+        title: 'Макаруны для девичника',
+        description: 'Оригинальные макарунс для яркого и веселого девичника',
+        productPrice: 1800,
+        delivery: true,
+        pickup: true,
+        present: false,
+        detailedDescription: 'Оригинальные макарунс для яркого и веселого девичника',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            raspberry: 15,
+            passionFruit: 10,
+            blueberry: 10,
+            lime: 10,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '13',
+        srcProduct: name,
+        type: 'wedding',
+        altProduct: 'Изображение макарунс с именами',
+        title: 'Макаруны с именами',
+        description: 'Уникальные макарунс с именами ваших гостей',
+        productPrice: 2500,
+        delivery: true,
+        pickup: true,
+        present: true,
+        detailedDescription: 'Уникальные макарунс с именами ваших гостей',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 10,
+            raspberry: 10,
+            lemon: 10,
+            vanilla: 10,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '14',
+        type: 'popular',
+        type: 'wedding',
         srcProduct: hard,
         altProduct: 'Изображение сердца',
         title: 'Сердце',
@@ -187,6 +313,72 @@ const productsPopular = [
             tangerine: 4,
             chocolate: 8,
         },
+    },
+    {
+        vendorCode: '15',
+        srcProduct: piramida,
+        type: 'wedding',
+        altProduct: 'Изображение пирамиды макарунс',
+        title: 'Пирамида макарунс',
+        description: 'Красочная пирамида из 60 макарунс с разнообразными вкусами',
+        productPrice: 5000,
+        delivery: true,
+        pickup: true,
+        present: true,
+        detailedDescription: 'Красочная пирамида из 60 макарунс с разнообразными вкусами',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 20,
+            raspberry: 15,
+            lemon: 10,
+            coconut: 15,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '16',
+        srcProduct: forGuests,
+        type: 'wedding',
+        altProduct: 'Изображение макарунс для гостей',
+        title: 'Макаруны для гостей',
+        description: 'Индивидуальные наборы макарунс для каждого гостя на вашем торжестве',
+        productPrice: 1300,
+        delivery: true,
+        pickup: true,
+        present: true,
+        detailedDescription: 'Индивидуальные наборы макарунс для каждого гостя на вашем торжестве',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            chocolate: 12,
+            vanilla: 12,
+            strawberry: 12,
+            pistachio: 12,
+        },
+        type: 'wedding'
+    },
+    {
+        vendorCode: '17',
+        srcProduct: henParty,
+        type: 'wedding',
+        altProduct: 'Изображение макарунс для девичника',
+        title: 'Макаруны для девичника',
+        description: 'Оригинальные макарунс для яркого и веселого девичника',
+        productPrice: 1800,
+        delivery: true,
+        pickup: true,
+        present: false,
+        detailedDescription: 'Оригинальные макарунс для яркого и веселого девичника',
+        compound: 'Состав продукта',
+        storageCondition: 'Условия хранения',
+        tastes: {
+            raspberry: 15,
+            passionFruit: 10,
+            blueberry: 10,
+            lime: 10,
+        },
+        type: 'wedding'
     },
 ];
 

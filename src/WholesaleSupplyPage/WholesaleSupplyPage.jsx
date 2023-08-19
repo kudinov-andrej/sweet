@@ -7,10 +7,10 @@ import {
     kendy, present, retail,
     ball, reviews,
     logoCompani, logoGazProm, logoMetro,
-    logoSber, logoVideo, logoZenit,
+    logoSber, logoVideo, logoZenit, promotingInformation,
 } from '../constants/wholesalePage/wholesalePage';
 import { useFormWithValidation } from '../UseFormValidation/useFormValidation';
-
+import BlockPromoting from './blockPromoting/BlockPromoting';
 
 function WholesaleSupplyPage({ isLogin }) {
 
@@ -25,37 +25,17 @@ function WholesaleSupplyPage({ isLogin }) {
     return (
         <section className="wholesale">
             <WholesalePageNavigation />
-            <div className="wholesale__promoting">
-                <img className="promoting__img" src={macarons} alt="фотография макаронс" />
-                <div className='promoting-information'>
-                    <h2 className='promoting-information__title'>Поставки пирожных оптом</h2>
-                    <p className='promoting-information__text'>Наши макаронсы и трубочки продаются в крупнейших кондитерских и кофейных сетях Москвы. Присоединяйтесь! </p>
-                    <div className='promoting-information__button-conteiner'>
-                        {isLogin
-                            ?
-                            <a className='promoting-information__link' href={presentation} download>
-                                <button className='promoting-information__button'>Презентация</button>
-                            </a>
-                            :
-                            <button className='promoting-information__button'>Презентация</button>}
-                        {isLogin
-                            ?
-                            <a className='promoting-information__link' href={list} download>
-                                <button className='promoting-information__button'>Презентация</button>
-                            </a>
-                            :
-                            <button className='promoting-information__button'>Прайс лист</button>}
-                    </div>
-                    <h3 className='promoting-information__list-title'>Мы предлагаем</h3>
-                    <ul className='promoting-information__list'>
-                        <li className='promoting-information__punct'>прямые поставки от производителя, всегда свежая продукция; </li>
-                        <li className='promoting-information__punct'>ассортимент с высоким средним чеком и маржой; </li>
-                        <li className='promoting-information__punct'>бесплатные акриловые шоубоксы для витрины;</li>
-                        <li className='promoting-information__punct'>продукцию для дегустации или снижение цены для проведения промо-акций; </li>
-                        <li className='promoting-information__punct'>гибкие условия сотрудничества и поставок.  </li>
-                    </ul>
-                </div>
-            </div>
+            <BlockPromoting
+                imgUrl={macarons}
+                title="Поставки пирожных оптом"
+                text="Наши макаронсы и трубочки продаются в крупнейших кондитерских и кофейных сетях Москвы. Присоединяйтесь!"
+                buttonOneText="Презентация"
+                fileOne={presentation}
+                fileTwo={list}
+                buttonTwoText="Правйс лист"
+                subtitle="Мы предлагаем"
+                list={promotingInformation}
+            />
             <div className='wholesale__offers'>
                 <h2 className='offers__title'>Что мы можем вам предложить:</h2>
                 <ul className='offers__list'>

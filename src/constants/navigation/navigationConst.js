@@ -27,7 +27,7 @@ const navigationConst = [
         id: 4,
         type: 'four',
         typeImg: 'four',
-        link: '#',
+        link: '/wedding',
         title: 'Свадебные предложения',
         text: 'Готовые наборы со скидкой. Вы можете подобрать набор на подходящий случай.'
     },
@@ -43,7 +43,7 @@ const navigationConst = [
         id: 6,
         type: 'six',
         typeImg: 'six',
-        link: '#',
+        link: '/wholesale-supply',
         title: 'Оптовые поставки',
         text: 'Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы.'
     }

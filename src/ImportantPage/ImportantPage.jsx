@@ -23,12 +23,14 @@ function ImportantPage(props) {
             />
             <Holidays />
             <PopularSet
+                title="Популярные наборы"
                 addToCart={props.addToCart}
                 hendleOpenButton={props.hendleOpenButton}
                 openBlockSet={props.openBlockSet}
                 quantity={props.quantity}
                 setOpenPopupAddGoods={props.setOpenPopupAddGoods}
                 setTitleGoodsForPopup={props.setTitleGoodsForPopup}
+                type='popular'
             />
             <NewsBlock
                 hendleOpenButtonNews={props.hendleOpenButtonNews}

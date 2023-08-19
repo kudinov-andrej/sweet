@@ -12,6 +12,7 @@ import GuaranteesPage from './GuaranteesPage/GuaranteesPage';
 import DeliveryAndPayPege from './DeliveryAndPayPege/DeliveryAndPayPege';
 import ContactsPage from './contactsPage/ContactsPage';
 import WholesaleSupplyPage from './WholesaleSupplyPage/WholesaleSupplyPage';
+import WeddingPage from './weddingPage/WeddingPage';
 
 function App() {
   // авторизация пользователя
@@ -213,6 +214,16 @@ function App() {
             openBlockSet={openBlockSet}
             hendleOpenButtonNews={hendleOpenButtonNews}
             openBlockNews={openBlockNews}
+            quantity={quantity}
+            addToCart={addToCart}
+            setOpenPopupAddGoods={setOpenPopupAddGoods}
+            setTitleGoodsForPopup={setTitleGoodsForPopup}
+          />}
+        />
+        <Route exact path="/wedding"
+          element={<WeddingPage
+            hendleOpenButton={hendleOpenButton}
+            openBlockSet={openBlockSet}
             quantity={quantity}
             addToCart={addToCart}
             setOpenPopupAddGoods={setOpenPopupAddGoods}

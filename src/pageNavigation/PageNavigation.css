@@ -1,0 +1,32 @@
+.page__navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 34px;
+    margin-bottom: 36px;
+    color: white;
+    align-self: center;
+    justify-self: center;
+}
+
+.page__navigation-punct {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(41, 41, 41, 0.46);
+}
+
+.page__navigation-punct_active {
+    color: #4E9DD3;
+}
+
+.page__navigation-punct:hover {
+    scale: 1.05;
+}

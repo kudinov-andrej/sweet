@@ -16,7 +16,7 @@ function ContactsPage() {
                 </div>
                 <div className="contacts-text__conteiner">
                     <h2 className="contacts-text__title">Контакты</h2>
-                    <h3 className="contacts-text__subtitle">Произвлодство</h3>
+                    <h3 className="contacts-text__subtitle">Производство</h3>
                     <p className="contacts-text__text">Красная площадь, дом 1.</p>
                     <p className="contacts-text__text">Время работы: с 8 до 19:30.</p>
                     <h3 className="contacts-text__subtitle">Пункты Самовывоза:</h3>

@@ -63,11 +63,19 @@ const reviews = [
     }
 ];
 
+const promotingInformation = [
+    { title: "прямые поставки от производителя, всегда свежая продукция;" },
+    { title: "ассортимент с высоким средним чеком и маржой;" },
+    { title: "бесплатные акриловые шоубоксы для витрины;" },
+    { title: "продукцию для дегустации или снижение цены для проведения промо-акций;" },
+    { title: "гибкие условия сотрудничества и поставок." }
+];
+
 export {
     macarons, list, presentation,
     basket, cafe, coffe, hotel,
     kendy, present, retail, ball, reviews,
     logoCompani, logoGazProm, logoMetro,
-    logoSber, logoVideo, logoZenit,
+    logoSber, logoVideo, logoZenit, promotingInformation,
 };
 
